@@ -1,0 +1,20 @@
+$fw-light: 300;
+$fw-normal: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+.light {
+  font-weight: $fw-light;
+}
+
+.normal {
+  font-weight: $fw-normal;
+}
+
+.semibold {
+  font-weight: $fw-semibold;
+}
+
+.bold {
+  font-weight: $fw-bold;
+}

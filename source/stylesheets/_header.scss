@@ -1,0 +1,44 @@
+.header {
+  font-family: $sans-serif-typeface;
+}
+
+.header a {
+  color: $base-font-color;
+}
+
+.header a.focus {
+  font-weight: $fw-bold;
+}
+
+.header-description {
+  @include clearfix;
+  margin: 0;
+}
+
+.site-nav {
+  @include fill-parent;
+  margin-top: $gt-m;
+  text-align: center;
+
+  @include media($medium-screen) {
+    float: right;
+    margin-top: 0;
+    text-align: left;
+    width: auto;
+  }
+}
+
+.site-nav-list {
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav-item {
+  display: inline-block;
+  margin-right: $gt-l;
+  margin-bottom: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

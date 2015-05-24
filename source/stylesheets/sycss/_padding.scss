@@ -1,0 +1,23 @@
+$orientations: top right bottom left;
+
+@each $orientation in $orientations {
+  .p-#{$orientation}-xs{
+    padding-#{$orientation}: $gt-xs;
+  }
+
+  .p-#{$orientation}-s{
+    padding-#{$orientation}: $gt-s;
+  }
+
+  .p-#{$orientation}-m{
+    padding-#{$orientation}: $gt-m;
+  }
+
+  .p-#{$orientation}-l{
+    padding-#{$orientation}: $gt-l;
+  }
+
+  .p-#{$orientation}-xl{
+    padding-#{$orientation}: $gt-xl;
+  }
+}

@@ -1,0 +1,18 @@
+- wrap_layout :layout do
+
+  = partial "partials/header"
+
+  %main.container
+    %section.container-content
+      = yield
+
+-# .bd-top
+-#   %section.project-preview.outer-container.col-3
+-#     .p-top-m
+-#       - data.projects.projects.each_with_index do |project, index|
+-#         %article.project-item.column
+-#           =link_to "/projects/#{project.slug}" do
+-#             %h3.p-title= project.name
+-#           %h6.p-type= project.type
+
+= partial "partials/footer"

@@ -1,0 +1,49 @@
+.resources {
+  @include media($medium-screen) {
+    @include span-columns(7 of 12);
+    @include shift(2.5 of 12);
+  }
+}
+
+.resources-header {
+  padding: 2em 0 1em;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.resources-header .title {
+  font-size: $f3;
+}
+
+.resources-header .subtitle {
+  font-weight: 400;
+  font-size: $f2;
+  margin-bottom: 1.5em;
+}
+
+.separator-block {
+  background-color: $base-border-color;
+  display: inline-block;
+  height: 4px;
+  width: 75px;
+}
+
+.resources-list {
+  padding-left: 0;
+}
+
+.resources-list li {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+.resources-list li p {
+  line-height: 1.5;
+  margin: 0;
+  font-family: $sans-serif-typeface;
+}
+
+.resources-list li p.source {
+  margin-bottom: 0.25em;
+  opacity: 0.85;
+}

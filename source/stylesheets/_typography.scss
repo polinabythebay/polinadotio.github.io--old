@@ -1,0 +1,219 @@
+body {
+  font-family: $body-typeface;
+  color: $base-font-color;
+  font-size: $base-font-size;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $display-typeface;
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 {
+  @extend %display-headline;
+}
+
+h2 {
+  font-size: $f4;
+}
+
+h3 {
+  font-size: $f3;
+}
+
+h4 {
+  font-size: $f2;
+}
+
+h5 {
+  @extend %byline;
+}
+
+p {
+  line-height: 1.75;
+}
+
+ul {
+  padding-left: $gt-m;
+}
+
+ul li {
+  list-style-type: square;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+
+ol {
+  padding-left: $gt-m;
+
+  li {
+    line-height: 1.5;
+  }
+}
+
+dl {
+  &.list {
+    list-style-type: square;
+  }
+
+  dt {
+    line-height: 1.5;
+  }
+}
+
+a {
+  @include transition(0.25s color linear);
+  color: $base-accent-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: lighten($base-accent-color, 5);
+  }
+}
+
+small {
+  font-weight: 400;
+}
+
+.half-opacity {
+  opacity: 0.5;
+}
+
+p {
+  margin: 0.5em auto 1.0em;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+figcaption {
+  @extend %caption;
+}
+
+.blockquote {
+  @include fill-parent;
+  border-top: 4px solid $base-border-color;
+  border-bottom: 4px solid $base-border-color;
+
+  .title {
+    @extend %byline;
+    color: #CACACA;
+  }
+
+  blockquote {
+    margin-left: 0;
+
+    @include media($medium-screen) {
+      font-size: $f5;
+    }
+  }
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  background: #ECECEC;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+pre {
+  code {
+    font-size: $f1;
+    padding-bottom: 1.5em !important;
+  }
+}
+
+pre {
+  code.hljs {
+    padding: 0 !important;
+    margin-left: -8.00em;
+  }
+}
+
+hr {
+  background: $base-border-color;
+  border: 0;
+  height: 1px;
+}
+
+// Typographic Variables
+%display-headline {
+  @extend .semibold;
+  font-family: $display-typeface;
+  font-size: $f5;
+}
+
+%article-header, .article-header {
+  @extend .semibold;
+  font-family: $display-typeface;
+  font-size: ($f2 + $f3) / 2;
+  display: inline;
+  border-bottom: 4px solid $base-font-color;
+}
+
+%standfirst, .standfirst {
+  @include media($medium-screen) {
+    font-size: ($f4 + $f3) / 2;
+  }
+}
+
+%standfirst-second, .standfirst-second {
+  @include media($medium-screen) {
+    font-size: $f3;
+  }
+}
+
+%byline {
+  @extend .semibold;
+  font-family: $display-typeface;
+  font-size: $f0;
+  text-transform: uppercase;
+}
+
+%caption {
+  @extend .normal;
+  color: $light-gray;
+  font-size: $f0;
+  line-height: 1.4;
+  margin-top: $gt-s;
+}
+
+// Web UI
+a.button {
+  border-radius: $base-border-radius;
+  border: 3px solid $base-accent-color;
+  display: block;
+  font-family: $display-typeface;
+  padding: $gt-s $gt-m;
+  text-align: center;
+
+  &:hover {
+    background: rgba($base-accent-color, 0.10);
+    text-decoration: none;
+  }
+}
+
+@mixin jumpline($mixin-color: $light-gray) {
+  color: $mixin-color;
+  border-bottom: 1px solid rgba($mixin-color, 0.5);
+
+  &:hover {
+    color: darken($mixin-color, 10);
+    border-bottom-color: darken($mixin-color, 20);
+    text-decoration: none;
+  }
+}
+
+// Grid Elements
+$article-header-height: ($f3 + $f4) / 2;
+$paragraph-gutter-row: 16px;
+
+$gutter-row-v0: $article-header-height + ($paragraph-gutter-row * 2.5);

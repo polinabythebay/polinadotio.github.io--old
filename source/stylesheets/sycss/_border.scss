@@ -1,0 +1,38 @@
+/* Border
+
+Main Prefix: bd
+
+*/
+
+$bd-color: rgba(black, 0.10);
+
+$bd-st-s: 1px;
+$bd-st-m: 2px;
+$bd-st-l: 4px;
+$bd-st-xl: 6px;
+
+$border: 1px solid $bd-color;
+
+$directions: top left right bottom;
+
+@each $direction in $directions {
+  .bd-#{$direction} {
+    border-#{$direction}: $bd-st-s solid $bd-color;
+  }
+}
+
+.bd-top-m {
+  border-top: $bd-st-m solid $bd-color;
+}
+
+.bd-top-l {
+  border-top: $bd-st-l solid $bd-color;
+}
+
+.bd-bottom-m {
+  border-bottom: $bd-st-m solid $bd-color;
+}
+
+.bd-bottom-l {
+  border-bottom: $bd-st-l solid $bd-color;
+}

@@ -1,0 +1,9 @@
+- wrap_layout :layout do
+
+  = partial "partials/header"
+
+  %main.container
+    %section.container-content
+      = yield
+
+= partial "partials/footer"

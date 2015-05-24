@@ -1,0 +1,32 @@
+.footer {
+  font-family: $sans-serif-typeface;
+
+  p {
+    font-size: $f1;
+  }
+}
+
+.footer-contact-list {
+  @include media($medium-screen) {
+    float: right;
+  }
+}
+
+.footer-contact-item {
+  float: left;
+  list-style: none;
+  margin-right: ($gt-m + $gt-l) / 2;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    color: lighten($base-font-color, 10);
+    font-size: $f3;
+
+    &:hover {
+      color: darken($light-gray, 15);
+    }
+  }
+}

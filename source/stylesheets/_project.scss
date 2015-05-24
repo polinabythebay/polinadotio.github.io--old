@@ -1,0 +1,168 @@
+.project-body {
+  padding: $gt-m;
+
+  @include media($medium-screen) {
+    @include outer-container;
+    padding: 3em 0;
+  }
+
+  h4 {
+    padding-top: 1em;
+  }
+
+  aside {
+    display: none;
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      font-family: $display-typeface;
+      font-size: $f0;
+      margin-top: $gutter-row-v0;
+    }
+
+    .sidebar-set {
+      font-weight: $fw-normal;
+      margin-bottom: 2em;
+    }
+
+    ul {
+      list-style-type: square;
+      margin: 0.5em 0 1.0em;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 0.5em;
+      }
+
+      a {
+        @include jumpline();
+      }
+    }
+  }
+}
+
+.box {
+  @include outer-container;
+  margin-bottom: 2em;
+
+  aside.mini {
+    margin-top: 0;
+
+    ul {
+      margin-top: $gt-m;
+    }
+
+    li {
+      color: rgba(black, 0.35);
+      font-size: $f00;
+      font-weight: $fw-normal;
+    }
+  }
+}
+
+.full-width {
+  @include fill-parent;
+  @include clearfix;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.main-column {
+  @include fill-parent;
+
+  @include media($medium-screen) {
+    @include span-columns(9);
+    padding-left: 2em;
+    padding-right: 4em;
+  }
+
+  &.fl-w {
+    padding: 0;
+  }
+
+  &.no-left {
+    @include media($medium-screen) {
+      @include shift(3);
+      @include span-columns(7);
+    }
+  }
+}
+
+.indent-left {
+  @include shift(3);
+  padding-left: 2em;
+}
+
+.indent-right {
+  @include shift(3);
+  padding-left: 2em;
+}
+
+figure.image-wrapper {
+  @include size(100% auto);
+  margin-bottom: $gt-l;
+
+  &.fx-h {
+    height: 350px;
+    overflow: hidden;
+  }
+
+  &.ios-h {
+    img {
+      @include size(auto 430px);
+    }
+  }
+
+  img {
+    @include size(100% auto);
+  }
+}
+
+figure.image-wrapper.side-caption {
+  img,
+  figcaption {
+    @include inline-block;
+    float: left;
+  }
+
+  img {
+    @include media($medium-screen) {
+      @include span-columns(6 of 9);
+    }
+  }
+
+  figcaption {
+    word-wrap: break-word;
+    @include media($medium-screen) {
+      @include span-columns(3 of 9);
+    }
+  }
+}
+
+article {
+  counter-reset: section;
+
+  .counter {
+    float: left;
+    margin-bottom: $gt-l;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: $gt-l;
+    }
+  }
+
+  .counter:before {
+    @extend %byline;
+    display: block;
+    border-bottom: 3px solid $base-border-color;
+    margin-bottom: $gt-m;
+    counter-increment: section;
+    content: "Job Story #" counter(section);
+    font-size: $f2;
+  }
+}

@@ -1,0 +1,27 @@
+$orientations: top right bottom left;
+
+@each $orientation in $orientations {
+  .m-#{$orientation}-xs{
+    margin-#{$orientation}: $gt-xs;
+  }
+
+  .m-#{$orientation}-s{
+    margin-#{$orientation}: $gt-s;
+  }
+
+  .m-#{$orientation}-m{
+    margin-#{$orientation}: $gt-m;
+  }
+
+  .m-#{$orientation}-l{
+    margin-#{$orientation}: $gt-m;
+  }
+
+  .m-#{$orientation}-xl{
+    margin-#{$orientation}: $gt-m;
+  }
+}
+
+.m-bt-nil {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,41 @@
+// Typography
+// $serif-typeface: 'minion-pro', $georgia;
+// $serif-typeface: "ff-tisa-web-pro", $georgia;
+$serif-typeface: "ff-tisa-web-pro", $georgia;
+$sans-serif-typeface: "Roboto", $helvetica;
+$serif-bold-typeface: "ff-tisa-web-pro", $georgia;
+$font-typeface: "fontawesome";
+
+$headline-typeface: $serif-bold-typeface;
+$display-typeface: $sans-serif-typeface;
+$body-typeface: $serif-typeface;
+
+// Colors
+$dark-navy: #4C5862;
+$maude: #888F93;
+$green: #53B06A;
+$neon: #9DC730;
+$reliable-blue: #3582A3;
+$light-tan: #F4F3EE;
+$light-gray: #9C9C9D;
+$maroon: #af5b6b;
+
+
+$base-font-color: $dark-navy;
+$base-accent-color: $reliable-blue;
+
+// Font Sizes
+$f00: 12px; // Captions/Small
+$f0: 14px; // Small
+$f1: 16px; // Smaller descriptions
+$f2: 18px; // Body text
+$f3: 28px; // Body text header
+$f4: 36px;
+$f5: 48px; // Page headers
+
+$base-font-size: $f1;
+
+// Global Assets
+$background-color: white;
+$base-border-radius: em(3);
+$base-border-color: rgba(black, 0.10);

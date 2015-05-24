@@ -1,0 +1,62 @@
+$gt-xxl: 8em;
+$gt-xl: 4em;
+$gt-l: 2em;
+$gt-m: 1em;
+$gt-s: 0.5em;
+$gt-xs: 0.25em;
+
+// Unconditional Float Direction //
+.pull-l {
+  float: left;
+}
+
+.pull-r {
+  float: right;
+}
+
+// Mobile float left
+.mbl-f-l {
+  float: left;
+}
+
+// Mobile float right
+.mbl-f-r {
+  float: right;
+}
+
+.f-r {
+  @include media($medium-screen) {
+    float: right;
+  }
+}
+
+.f-l {
+  @include media($medium-screen) {
+    float: right;
+  }
+}
+
+// Mobile Block
+.mbl-b {
+  display: block;
+
+  @include media($medium-screen) {
+    display: inherit;
+  }
+}
+
+.mbl-t-c {
+  text-align: center;
+
+  @include media($medium-screen) {
+    text-align: inherit;
+  }
+}
+
+.mbl-nil {
+  display: none;
+
+  @include media($medium-screen) {
+    display: block;
+  }
+}

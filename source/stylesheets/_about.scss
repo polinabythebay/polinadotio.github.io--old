@@ -1,0 +1,45 @@
+.about {
+  @include media($medium-screen) {
+    @include span-columns(7 of 12);
+    @include shift(2.5 of 12);
+    padding-bottom: $gt-l;
+  }
+}
+
+.about-header {
+  padding: 2em 0 0;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.about-header .title {
+  font-size: $f3;
+  line-height: 1.5;
+}
+
+.about-header .subtitle {
+  font-weight: 400;
+  font-size: ($f2 + $f3)/2;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.about p {
+  font-family: $sans-serif-typeface;
+}
+
+.about-title {
+  font-size: $f3;
+  font-weight: $fw-normal;
+}
+
+.about-sidebar {
+  @include span-columns(4 of 12);
+  @include shift(1);
+  padding-top: ($gt-l * 2) + $gt-m;
+}
+
+.about-profile-image {
+  @include size(100% auto);
+}

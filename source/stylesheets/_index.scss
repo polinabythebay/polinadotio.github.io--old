@@ -1,0 +1,154 @@
+article.project-item {
+  @include media($medium-screen) {
+    @include span-columns(4 of 12);
+    @include omega(3n);
+  }
+
+  background: white;
+  margin-bottom: $gt-l;
+
+  .p-title {
+    color: $base-font-color;
+    font-size: ($f2 + $f3) / 2;
+    font-weight: $fw-semibold;
+  }
+
+  .p-timeframe {
+    @extend .normal;
+    @extend .half-opacity;
+    color: $base-font-color;
+  }
+
+  .p-type {
+    @extend .normal;
+    @extend .half-opacity;
+    color: $base-font-color;
+  }
+
+  .p-subtitle {
+    margin-top: 0;
+    @extend .normal;
+    @extend .half-opacity;
+    font-size: $f0;
+    color: $base-font-color;
+    font-family: $sans-serif-typeface;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  a {
+    color: $base-font-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.project-meta-info-list {
+  @include fill-parent;
+  @include clearfix;
+  line-height: $f1;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.project-meta-info-item {
+  display: inline-block;
+  line-height: $f0;
+
+  &:nth-child(2) {
+    padding-left: $gt-m;
+    position: relative;
+
+    &:before {
+      @extend .half-opacity;
+      content: "\2022";
+      position: absolute;
+      left: $gt-xs;
+      top: -($gt-xs - 0.1em);
+    }
+  }
+}
+
+.project-index-image-container {
+  position: relative;
+}
+
+.project-index-timeframe {
+  display: none;
+  background: rgba(black, 0.75);
+  bottom: $gt-m;
+  color: white;
+  position: absolute;
+  right:  $gt-m;
+  padding: $gt-s;
+  font-size: $f00 - 2px;
+}
+
+.project-index-image {
+  display: block;
+  height: auto;
+  width: 100%;
+
+  &:hover {
+    .project-index-timeframe {
+      display: block;
+    }
+  }
+}
+
+
+.project-preview {
+  text-align: center;
+
+  .project-item {
+    .p-title {
+      font-size: $f3;
+    }
+
+    .p-subtitle {
+      text-align: left;
+    }
+  }
+}
+
+.project-body {
+  padding: $gt-l 0;
+
+  aside {
+    @include span-columns(3);
+    font-family: $display-typeface;
+    font-size: $f0;
+    margin-top: $gutter-row-v0;
+
+    .sidebar-set {
+      margin-bottom: $gt-l;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: $gt-s 0 $gt-l;
+      padding-left: 0;
+
+      li {
+        margin-bottom: $gt-s;
+      }
+
+      a {
+        @include jumpline();
+      }
+    }
+  }
+
+  article.main-column {
+    @include media($medium-screen) {
+      @include span-columns(9);
+      padding-left: $gt-l;
+    }
+  }
+}
+
