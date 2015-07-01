@@ -90,7 +90,7 @@ Note that there's a period [.] at the end. You will need that. Let's try this!
 
 And there you have it. Note: you might need to check your spam folder. 
 
-![Alt text](/static/helloworld.png)
+(/static/helloworld.png)
 
 
 

@@ -76,6 +76,13 @@ article.project-item {
 
 .project-index-image-container {
   position: relative;
+  &:hover{
+    cursor: pointer;
+    opacity:5;
+    .project-index-timeframe {
+      display: block;
+    }
+  }
 }
 
 .project-index-timeframe {
