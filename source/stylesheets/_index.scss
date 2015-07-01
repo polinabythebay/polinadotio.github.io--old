@@ -94,10 +94,11 @@ article.project-item {
   height: auto;
   width: 100%;
 
-  &:hover {
-    .project-index-timeframe {
+  &:hover{
+    opacity:5;
+  /*  .project-index-timeframe {
       display: block;
-    }
+    }*/
   }
 }
 

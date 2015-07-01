@@ -1,0 +1,235 @@
+%header.project-banner
+  <div class="image-wrapper #{t('project-five.slug')}"></div>
+  %section.banner
+    %h1= t("project-five.name")
+    %h5.half-opacity.timeframe.m-bt-nil Role: #{t("project-five.role")}
+    %h5.half-opacity.timeframe= t("project-five.timeframe")
+    %p.subtitle= t("project-five.subtitle")
+%section.project-body
+  .box
+    %aside.sidebar-l
+      .sidebar-set
+        %header
+          %h5 Role
+          %p #{t("project-five.role")}
+      .sidebar-set
+        %header
+          %h5 Toolkit
+          %ul
+            %li Ruby on Rails
+            %li iOS Design
+            %li Backbone.js
+            %li HTML & SCSS
+            %li Sketch app (UI design)
+            %li Adobe Photoshop
+            %li Adobe Illustrator (Icon design)
+            %li Flinto (Prototype)
+            %li Git
+            %li
+              = link_to "thoughtbot's Product Design Sprint",
+                "http://playbook.thoughtbot.com/#prep-work"
+            %li
+              = link_to "Vim",
+                "https://github.com/lisasy/dotfiles/blob/master/vimrc"
+            %li Trello
+      .sidebar-set
+        %header
+          %h5 Team (8)
+          %ul
+            %li 1 Developer (me)
+
+    %article.main-column.fl-w
+      %h3.article-header= t("project-five.standfirst_title")
+      %p.standfirst= t("project-five.standfirst")
+      .row
+        %h4 Project Background
+        %p
+          Founded in 2007, Nixle connects citizens with alerts from their government agencies such as firefighters and police officers. In an effort to expand their product to broadly connect agencies, citizens, and schools altogether, the Nixle team came to <a href="http://thoughtbot.com" target="_blank">thoughtbot</a> to pursue this vision.
+        %p
+          As the lead product designer on this project, I worked through the
+          entire project lifecycle for the MVP launch in November 2014. I would
+          be responsible for identifying the customers' goals to prototyping to
+          building out features that shipped. Thus, it was imperative for me to
+          conduct the product discovery, grasping Nixle's existing product,
+          business, technology, and customer. I led a week-long design sprint
+          with the stakeholders, addressing how to define a product that
+          addresses customers' needs within the various constraints we had.
+        %p
+          Our goal was to build an MVP in web and iOS platforms to provide the
+          services to the customers.
+  .box
+    %article.main-column.no-left
+      %h4 The Customer
+      %p
+        Since Nixle is currently connected to thousands of public safety agencies and citizens using their service, we aimed to define two groups of primary customers:
+      %ol
+        %li School-related people (K-12 school staff & administration, parents, guardians)
+        %li Neighborhood people
+      %p
+        Because <strong>school-related people</strong> represent the more
+        specific target base, we determined them to be the target customers for
+        the MVP. We hoped that a portion of this group would become
+        <strong>"super users"</strong> who would engage deeply with Nixle and
+        convert their neighbors into Nixle users. We hypothesized that strong
+        engagement within schools would lead to adoption at a neighborhood
+        level.
+      %figure.image-wrapper
+        = image_tag("standin.jpg")
+        %figcaption
+          We determined the customer's goals, inhibitions holding them back
+          from completing those goals, and how Nixle could help them accomplish
+          them.
+
+  .box.bd-bottom-l
+    %article.full-width
+      .row.counter
+        %aside.mini
+          %h5 Forces
+          %ul
+            %li Nixle matches you with the right neighborhood you belong to.
+            %li Nixle matches you with schools if you are a parent or guardian.
+        .main-column
+          %h5 Situation
+          %p
+            I want to relevant information from my community
+          %h5 Motivation
+          %p
+            so I use the Nixle application to easily access this information
+          %h5 Desired Outcome
+          %p
+            so that I feel more connected to my community.
+
+      .row.counter
+        %aside.mini
+          %h5 Forces
+          %ul
+            %li Nixle matches you with the right neighborhood you belong to.
+            %li Nixle matches you with schools if you are a parent or guardian.
+        .main-column
+          %h5 Situation
+          %p
+            I want to relevant information from my community
+          %h5 Motivation
+          %p
+            so I use the Nixle application to easily access this information
+          %h5 Desired Outcome
+          %p
+            so that I feel more connected to my community.
+
+
+  .box
+    %article.main-column.no-left
+      .row
+        %h4 Figuring out flow and information architecture
+        %p
+          Due to the large scope of the product across web and mobile platforms, I looked at the large picture on what type of experience to provide, and how we would get there. In considering this large scope, we were able to break up the product into these core components:
+        %ul.col-2
+          .column
+            %li Landing/Onboarding
+            %li Authentication
+            %li Notification
+            %li Feed
+          .column
+            %li Communities
+            %li User
+            %li Settings
+        %p
+          Since we operated mobile-first, I figured out the flow and information architecture of the native iOS appliciation, taking into consideration native components based on the <a href="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/" target="_blank">iOS Human Interface Guidelines</a>. While broad conceptual architecture across iOS and the web remained the same, their respective platforms allowed for diverging presentations of information.
+        %figure.image-wrapper
+          = image_tag("standin.jpg")
+          %figcaption
+            A preliminary sketch of Neon's information architecture of
+            navigation, defined during the design sprint.
+
+  .box
+    %article.main-column.no-left
+      .row
+        %h4 Prototyping
+        .col-2
+          .column.p-top-m
+            %figure.image-wrapper.ios-h
+              = image_tag("standin.jpg")
+              %figcaption
+          .column
+            %p
+              Using <a href="https://www.flinto.com/" target="_blank">Flinto</a>, I created a preliminary prototype of the iOS application. It features the core information architecture in the <a href="https://developer.apple.com/library/ios/documentation/userexperience/conceptual/mobilehig/Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW52" target="_blank">tab bar</a>.
+            %p
+              One of my biggest learnings was that <strong>I should have built
+              lower-fidelity screens for this interactive prototype</strong>,
+              perhaps even possibly with pencil and paper. It was too early to
+              be thinking about visual design while we were still figuring out
+              the information architecture.
+            %p
+              Furthermore, my teammate who is an iOS developer gave me feedback
+              that it's more ideal to test the interactive prototype in
+              low-fidelity to assess the complexity of the proposal before
+              polishing the "look & feel".
+
+  .box
+    %article.main-column.no-left
+      .row
+        %h4 Using card sorting to sort out uncertainties
+        %p
+          During this point in the project, I felt <i>very</i> uncertain about
+          the viability of two features: 1) "trackify" and 2) allowing users to
+          create alerts. In order to test my hypothesis that these features
+          would prove mentally challenging to new application users, I ran a <a href="http://robots.thoughtbot.com/card-sorting" target="_blank">card sorting</a>.
+        %p
+          This exercise confirmed my hypothesis that these features would be
+          mentally complexing to new users, and I was able to defend the
+          product decision to not have these two features be in MVP with this
+          evidence.
+  .box
+    %article
+      .column
+        %figure.image-wrapper
+          = image_tag("standin.jpg")
+  .box
+    %article.main-column.no-left
+      %h4 Interaction design
+      %p
+        Here is the interaction I designed. This is what happens when a user
+        creates a post and sends it to their nearby neighborhoods:
+      %figure.image-wrapper
+        = image_tag("standin.jpg")
+  .box
+    .row
+      %article.main-column.no-left
+        %h4 Front-end development with Rails, Backbone.js, SCSS, and HTML
+        %p
+          I got to work with Backbone.js on Rails for this project. While the
+          API was served through Rails, Backbone.js was used to create a
+          performant front-end experience for the user. I collaborated closely
+          with the Nixle developer, and we problem-solved often to ensure we
+          were creating the cleanest and most easily maintainable code base. I
+          wrote in HTML, SCSS, and Javascript, occasionally creating templates
+          and views in Backbone.js.
+        %p
+          Here are some simple code snippets that emerged from this project:
+        :plain
+          <pre><code>
+            @mixin icon($content) {
+              &:before {
+                content: $content;
+              }
+            }
+          </code></pre>
+          <pre><code>
+            @mixin paragraph-ellipsis($number-of-lines: 2) {
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: $number-of-lines;
+              display: -webkit-box;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          </code></pre>
+
+  .box
+    .row
+      %article.main-column.no-left
+        %h4 Front-end development with Xcode
+        %p
+          While my primary role in working on the iOS application was to direct
+          the product design and provide assets, I had occasional opportunities
+          to touch the code base in Xcode. Here are some of the things I got to
+          do:
