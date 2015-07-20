@@ -1,6 +1,6 @@
 projects:
   -
-    name: Coming soon!
+    name: Wellesley Urban Dictionary
     subtitle:
       My first Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
     slug: project-one
@@ -10,7 +10,7 @@ projects:
     timeframe: June 2016 - July 2016
     external: false
   -
-    name: Coming soon!
+    name: Static Site Generator
     subtitle:
       My second Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
     slug: project-two
@@ -20,7 +20,7 @@ projects:
     timeframe: January 2015 - Now
     external: false
   -
-    name: Coming soon!
+    name: Portfolio
     subtitle:
       My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
     slug: project-three
@@ -29,33 +29,4 @@ projects:
     index_image_url: "standin.jpg"
     timeframe: January 2015 - Now
     external: false
-  -
-    name: Coming soon!
-    subtitle:
-      My fourth Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-four
-    type: Project Four
-    main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: January 2015 - Now
-    external: false
-  -
-    name: Coming soon!
-    subtitle:
-      My fifth Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-five
-    type: Project Five
-    main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: January 2015 - Now
-    external: false
-  -
-    name: Coming soon!
-    subtitle:
-      My sixth Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-six
-    type: Project Six
-    main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: January 2015 - Now
-    external: false
+
