@@ -4,7 +4,9 @@ date: 2015-07-05
 tags:
 ---
 
-I currently get paid to use technology and do things with it (that is what I tell people sometimes). It can be hard to tell folks who aren't familiar with computer science or the tech industry what I do. The problem sets I had in college aren't a good reflection of what I do either, so my fellow classmates who took 1 or 2 computer science courses probably won't have a good idea of what a paid developer does. Here's generally what I do:
+<img src="/img/articles/computer_problems.png" alt="">
+
+It can be hard to tell folks who aren't familiar with computer science or the tech industry what I do. The problem sets I had in college aren't a good reflection of what I do either, so my fellow classmates who took 1 or 2 computer science courses probably won't have a good idea of what a paid developer does. Here's generally what I do:
 
 #### 1. I translate product requirements into code
 

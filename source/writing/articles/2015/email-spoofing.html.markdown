@@ -12,7 +12,7 @@ Establish a TCP connection to a mail server and use SMTP commands to send email 
 
 ####Concepts:
 
-TCP, or the Transmission Control Protocol, is a transport layer protocol used for establishing logical communication between applications and different hosts that are not physically connected to one another. Applications can be ones running on your computer (a local host) or the internet (Gmail for example). In this case, I am using TCP to establish a connection from my linux account on a college server to a google mail server. SMTP is the Simple Mail Transfer Protocol that is the de facto standard for sending email across the internet. It's been around since 1982 and is very minimal-- to this day it will only support 7 bit ASCII characters, which amuses me when I think of multimedia email attachments these days. In this example I'm going to use telnet to manually send mail through an SMTP mail server. 
+TCP, or the Transmission Control Protocol, is a transport layer protocol used for establishing logical communication between applications and different hosts that are not physically connected to one another. Applications can be ones running on your computer (a local host) or the internet (Gmail for example). In this case, I am using TCP to establish a connection from my linux account on a college server to a Google mail server. SMTP is the Simple Mail Transfer Protocol that is the de facto standard for sending email across the internet. It's been around since 1982 and is very minimal-- to this day it will only support 7 bit ASCII characters, which amuses me when I think of multimedia email attachments these days. In this example I'm going to use telnet to manually send mail through an SMTP mail server. 
 
 ####Step 1: Establish a TCP Connection
 
@@ -30,15 +30,18 @@ Query DNS for the mail servers that deliver mail to wellesley.edu:
 
 <pre><code>
 [psoshnin@tempest~] nslookup -type=MX wellesley.edu
-Server:     149.130.10.16
-Address:    149.130.10.16#53
-
-wellesley.edu   mail exchanger = 5 ALT2.ASPMX.L.GOOGLE.COM.
-wellesley.edu   mail exchanger = 10 ASPMX2.GOOGLEMAIL.COM.
-wellesley.edu   mail exchanger = 10 ASPMX3.GOOGLEMAIL.COM.
-wellesley.edu   mail exchanger = 1 ASPMX.L.GOOGLE.COM.
-wellesley.edu   mail exchanger = 5 ALT1.ASPMX.L.GOOGLE.COM.
-
+Server: 149.130.10.16
+Address: 149.130.10.16#53
+wellesley.edu mail exchanger = 
+5 ALT2.ASPMX.L.GOOGLE.COM.
+wellesley.edu mail exchanger = 
+10 ASPMX2.GOOGLEMAIL.COM.
+wellesley.edu mail exchanger = 
+10 ASPMX3.GOOGLEMAIL.COM.
+wellesley.edu mail exchanger = 
+1 ASPMX.L.GOOGLE.COM.
+wellesley.edu mail exchanger = 
+5 ALT1.ASPMX.L.GOOGLE.COM.
 [psoshnin@tempest~]
 </pre></code>
 
