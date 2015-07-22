@@ -1,13 +1,13 @@
 projects:
   -
-    name: Wellesley Urban Dictionary
+    name: Portfolio
     subtitle:
       My first Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
     slug: project-one
     type: Project One
     main_image_url: "standin.jpg"
     index_image_url: "standin.jpg"
-    timeframe: June 2016 - July 2016
+    timeframe: Personal Portfolio
     external: false
   -
     name: Static Site Generator
@@ -17,16 +17,16 @@ projects:
     type: Project Two
     main_image_url: "standin.jpg"
     index_image_url: "standin.jpg"
-    timeframe: January 2015 - Now
+    timeframe: Static Site Generator in Python
     external: false
   -
-    name: Portfolio
+    name: Wellesley Urban Dictionary
     subtitle:
       My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
     slug: project-three
     type: Project Three
     main_image_url: "standin.jpg"
     index_image_url: "standin.jpg"
-    timeframe: January 2015 - Now
+    timeframe: Wellesley Urban Dictionary
     external: false
 
