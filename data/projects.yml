@@ -1,13 +1,13 @@
 projects:
   -
-    name: Portfolio
+    name: Wellesley Urban Dictionary
     subtitle:
-      My first Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-one
-    type: Project One
+      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+    slug: project-three
+    type: Project Three
     main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: Personal Portfolio
+    index_image_url: "urban_dict_01.jpg"
+    timeframe: Wellesley Urban Dictionary
     external: false
   -
     name: Static Site Generator
@@ -20,14 +20,14 @@ projects:
     timeframe: Static Site Generator in Python
     external: false
   -
-    name: Wellesley Urban Dictionary
+    name: Portfolio
     subtitle:
-      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-three
-    type: Project Three
+      My first Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+    slug: project-one
+    type: Project One
     main_image_url: "standin.jpg"
     index_image_url: "standin.jpg"
-    timeframe: Wellesley Urban Dictionary
+    timeframe: Making my Portfolio
     external: false
   -
     name: Rails API
@@ -37,56 +37,56 @@ projects:
     type: Project Three
     main_image_url: "standin.jpg"
     index_image_url: "standin.jpg"
-    timeframe: Rails API
+    timeframe: Coming soon!
     external: false
-  -
-    name: Rails API Analytics tool with D3.js
-    subtitle:
-      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-five
-    type: Project Three
-    main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: Rails API Analytics tool with D3.js
-    external: false
-  -
-    name: Social Bookmarking Tool
-    subtitle:
-      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-five
-    type: Project Three
-    main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: Social Bookmarking Tool
-    external: false
-  -
-    name: Personal Wiki
-    subtitle:
-      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-five
-    type: Project Three
-    main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: Personal Wiki Generator
-    external: false
-  -
-    name: Algorithms and Data Structures repo
-    subtitle:
-      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-five
-    type: Project Three
-    main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: Puzzles Collection
-    external: false
-  -
-    name: Flashcard Tool
-    subtitle:
-      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-four
-    type: Project Three
-    main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
-    timeframe: Flashcard Tool
-    external: false
+  # -
+  #   name: Rails API Analytics tool with D3.js
+  #   subtitle:
+  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+  #   slug: project-five
+  #   type: Project Three
+  #   main_image_url: "standin.jpg"
+  #   index_image_url: "standin.jpg"
+  #   timeframe: Rails API Analytics tool with D3.js
+  #   external: false
+  # # -
+  #   name: Social Bookmarking Tool
+  #   subtitle:
+  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+  #   slug: project-five
+  #   type: Project Three
+  #   main_image_url: "standin.jpg"
+  #   index_image_url: "standin.jpg"
+  #   timeframe: Social Bookmarking Tool
+  #   external: false
+  # -
+  #   name: Personal Wiki
+  #   subtitle:
+  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+  #   slug: project-five
+  #   type: Project Three
+  #   main_image_url: "standin.jpg"
+  #   index_image_url: "standin.jpg"
+  #   timeframe: Personal Wiki Generator
+  #   external: false
+  # -
+  #   name: Algorithms and Data Structures repo
+  #   subtitle:
+  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+  #   slug: project-five
+  #   type: Project Three
+  #   main_image_url: "standin.jpg"
+  #   index_image_url: "standin.jpg"
+  #   timeframe: Puzzles Collection
+  #   external: false
+  # -
+  #   name: Flashcard Tool
+  #   subtitle:
+  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+  #   slug: project-four
+  #   type: Project Three
+  #   main_image_url: "standin.jpg"
+  #   index_image_url: "standin.jpg"
+  #   timeframe: Flashcard Tool
+  #   external: false
 
