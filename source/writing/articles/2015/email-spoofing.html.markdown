@@ -102,4 +102,4 @@ Connection closed by foreign host.
 
 And there you have it. Note: you might need to check your spam folder. 
 
-<img src="/img/articles/helloworld.png" alt="">
+<img src="/img/articles/helloworld.png" alt="" style="width: 100%;max-height: 100%">
