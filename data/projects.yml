@@ -26,7 +26,7 @@ projects:
     slug: project-one
     type: Project One
     main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
+    index_image_url: "portfolio_index.png"
     timeframe: Making my Portfolio
     external: false
   -
@@ -36,7 +36,7 @@ projects:
     slug: project-four
     type: Project Three
     main_image_url: "standin.jpg"
-    index_image_url: "standin.jpg"
+    index_image_url: "coming_soon.jpg"
     timeframe: Coming soon!
     external: false
   # -
