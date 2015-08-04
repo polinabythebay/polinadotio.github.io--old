@@ -32,7 +32,7 @@ One of my managers has talked for months about instituting some sort of review p
 
 #### Summary
 
-Not all startups have this issue, but most startups will have some or all of these issues. The best thing to do is to figure out your exit strategy from that startup and do a lot of research. Join women in tech groups on Facebook and ask women at other companies out for coffee. Ask them these questions. Do not end up with a bad manager! You will not have a good time. Instead try to find a company that cares more about its employees, especially its women. It'll definitely be worth it. :) And please do not leave tech! I commiserate with you and I support you <i class="fa fa-heart"></i>.
+Not all startups have this issue, but most startups will have some or all of these issues. The best thing to do is to figure out your exit strategy from that startup and do a lot of research. Join women in tech groups on Facebook and ask women at other companies out for coffee. Ask them these questions. Do not end up with a bad manager! You will not have a good time. Instead try to find a company that cares more about its employees, especially its women. It'll definitely be worth it. :) And please do not leave tech! I commiserate with you and I support you. You are not alone <i class="fa fa-heart"></i>.
 
 
 
