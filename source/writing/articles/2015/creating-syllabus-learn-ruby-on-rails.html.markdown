@@ -463,3 +463,5 @@ Choose several of the following [areas](https://www.ruby-toolbox.com/) and creat
 * [Ruby Stack](http://bitnami.com/stack/ruby)
 * [The Ruby Game](http://www.therubygame.com/challenges/distressed-ducks/submissions)
 
+[Feel free to <i class="fa fa-code-fork"></i> this on [<i class="fa fa-github-alt"></i>](https://github.com/polinadotio/ruby-on-rails-syllabus)]
+
