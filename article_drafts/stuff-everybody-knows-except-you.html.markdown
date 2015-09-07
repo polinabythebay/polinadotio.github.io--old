@@ -1,6 +1,6 @@
 ---
-title: Choosing a web server for your Rails application
-date: 2015-07-20
+title: Stuff everyone knows except you-- a draft
+date: 2015-09-02
 tags:
 ---
 
