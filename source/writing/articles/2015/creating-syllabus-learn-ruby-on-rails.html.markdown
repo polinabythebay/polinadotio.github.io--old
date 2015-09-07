@@ -1,6 +1,6 @@
 ---
 title: Creating a syllabus to learn Ruby on Rails
-date: 2015-08-10
+date: 2015-09-4
 tags:
 ---
 

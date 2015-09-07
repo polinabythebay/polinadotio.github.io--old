@@ -1,5 +1,5 @@
 ---
-title: Three reasons not to work at a startup
+title: Three reasons startups aren't great places for women
 date: 2015-08-03
 tags:
 ---

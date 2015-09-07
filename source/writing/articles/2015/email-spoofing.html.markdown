@@ -1,6 +1,6 @@
 ---
 title: A short guide to email spoofing
-date: 2014-03-15
+date: 2015-09-06
 tags:
 ---
 
