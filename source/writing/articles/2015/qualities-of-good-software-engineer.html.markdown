@@ -44,23 +44,6 @@ Becoming a good software engineer means:
 
 <img src="/img/articles/cleanbuild.jpg" alt="" style="width: 100%;max-height: 100%">
 
-####Last but not least
-
-Did I mention that in order to be a good software engineer, you need to be a white cis male whose coded since 13, likes playing video games, watching scifi, and has a formal CS degree?
-
-<br>
-
-#NO
-
-<br>
-
-[This is what a software engineer looks like](http://www.wogrammer.org/):
-
-<img src="/img/articles/womentech1.jpg" alt="" style="width: 100%;max-height: 100%">
-
-<img src="/img/articles/womentech2.jpg" alt="" style="width: 100%;max-height: 100%">
-
-
 
 
 
