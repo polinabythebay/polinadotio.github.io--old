@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'bourbon'
-gem 'middleman'
+gem 'middleman', github: 'middleman/middleman', branch: 'v3-stable'
 gem 'middleman-autoprefixer'
 gem 'middleman-blog'
 gem 'middleman-deploy'
