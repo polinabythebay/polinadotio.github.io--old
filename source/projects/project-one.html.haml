@@ -14,59 +14,65 @@
       /     %p Product Designer
       .sidebar-set
         %header
-          %h5 Toolkit
+          %h5 Iterations
           %ul
-            %li Middleman
-            %li HAML for templating
-            %li Sass (Bourbon and Neat) for styling
-            / %li
-            /   = link_to "thoughtbot's Product Design Sprint",
-            /     "http://playbook.thoughtbot.com/#prep-work"
-            / %li
-            /   = link_to "Vim",
-            /     "https://github.com/lisasy/dotfiles/blob/master/vimrc"
-            / %li Trello
+            %li Version zero: My <a href="https://about.me/polinasoshnin"target="_blank">about.me</a> page.
+            %li Version 1: <a href="https://github.com/polinadotio/psoshnin.github.io--v1/tree/jekyll-bootstrap"target="_blank">Jekyll blog</a>.
+            %li Version 2: <a href="https://github.com/polinadotio/single-page-site-with-d3"target="_blank">D3.js Visualization</a>. 
+            %li Version 3: <a href="https://github.com/polinadotio/psoshnin.github.io--v3"target="_blank">Octopress blog</a>.
+            %li Version 4: <a href="https://github.com/polinadotio/static-blog-generator"target="_blank">Homemade static site</a>.
+            %li Version 5: <a href="https://github.com/polinadotio/polinadotio.github.io"target="_blank">Middleman portfolio/blog</a>.
       / .sidebar-set
       /   %header
-      /     %h5 Team
+      /     %h5 Iterations
       /     %ul
-      /       %li 1 Product Designer (me)
-      /       %li 1 Rails developer
+      /       %li Version zero: My <a href="https://about.me/polinasoshnin">about.me</a> page.
+      /       %li Version 1: <a href="https://github.com/polinadotio/psoshnin.github.io--v1">Jekyll blog</a>.
       /       %li 1 other designer (part-time)
     %article.main-column.fl-w
-      %h3.article-header= t("project-one.standfirst_title")
-      %p.standfirst= t("project-one.standfirst")
+      / %h3.article-header= "Making my Portfolio"
+      / %p.standfirst= t("project-one.standfirst")
       .row
-        %h4 Use Case
+        %h2 Making my Portfolio
+        %p I have gone through several iterations of my personal site (6 distinct ones to be exact!).
+        %h3.article-header= "Use Case"
         %p
           A personal portfolio and blog that allows me to share my work and stories with my community and potential employers. I wanted it to be divided into two main sections. One section where I write project case studies to go through my development and implementation of projects. Another section for blogging where I can write about things I'm interested in and things that I learn.
+        %h4 Shopping around
         %p
-          First iteration of my site-- Using Jekyll
-          https://github.com/polinadotio/psoshnin.github.io--v1
+          Standard profiles: LinkedIn, Twitter, Stack Overflow, Hacker News, Facebook, Instagram, about.me. 
+        %h4 Discovering Github pages
+        %p 
+          Why Github pages is awesome.
+        %h3.article-header= "Blogging with Jekyll"
         %p
-          Second iteration of my site-- Single page using D3.js 
+          First geniune iteration of my site.
+          Learning how to use Github Pages.
+          How to use a Rails-related application.
+          How to publish using the command line.
+          Plugins, themes.
+        %h4 Drawbacks to Jekyll
+        %p Way too much functionality that I didn't need and got in the way.
+        %h3.article-header= "Leaving the clutter for D3.js"
         %p
-          Content loaded from external files
-        %p  
-          If you load models or textures from external files, due to browsers' "same origin policy" security restrictions, loading from a file system will fail with a security exception.
+          Jekyll got messy and complicated. Wanted something simple.
+        %h3.article-header= "Static site generators take two: Blogging with Octopress"
         %p
-          There are two ways how to solve this:
+          Wanted to see what the fuss was all about. 
+        %h3.article-header= "Expanding my awareness by rolling my own"
         %p
-          Change security for local files in a browser (access page as file:///example)
-          
-          Run files from a local server (access page as http://localhost/example)
-          
-          If you use option 1, be aware that you may open yourself to some vulnerabilities if using the same browser for a regular web surfing. You may want to create a separate browser profile / shortcut used just for local development to be safe.
-          
-          http://stackoverflow.com/questions/8449716/cross-origin-requests-are-only-supported-for-http-but-its-not-cross-domain/26845720#26845720
-        %p
-          Third iteration-- using octopress
-          https://github.com/polinadotio/psoshnin.github.io--v2
-          http://octopress.org/docs/blogging/
-        %p
-          Fourth iteration-- Rolling my own, see the static site generator in Python
-        %p
-          Fifth and current iteration-- using Middleman
+          Got tired of how much functionality Octopress had that I ultimately didn't need. Also wanted to fully understand how a static site generator works, so I created my own using Python and Flask.
+        %h3.article-header= "Achieving enlightenment with Middleman"
+        %p 
+          Balance between something simple and something beautifully made.
+
+
+
+
+
+
+
+
 
 
 

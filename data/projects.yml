@@ -30,10 +30,10 @@ projects:
   #   timeframe: Making my Portfolio
   #   external: false
   -
-    name: Rails API
+    name: Coming soon
     subtitle:
       My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-    slug: project-four
+    slug: coming-soon
     type: Project Three
     main_image_url: "standin.jpg"
     index_image_url: "coming_soon.jpg"
