@@ -1,5 +1,5 @@
 ---
-title: Is your web app 12 factor compliant?
+title: Is my Rails app 12 factor compliant?
 date: 2015-10-09
 tags:
 ---
