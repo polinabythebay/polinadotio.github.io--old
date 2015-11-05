@@ -19,18 +19,58 @@ projects:
   #   index_image_url: "standin.jpg"
   #   timeframe: Static Site Generator in Python
   #   external: false
-  # -
-  #   name: Portfolio
-  #   subtitle:
-  #     My first Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-  #   slug: project-one
-  #   type: Project One
-  #   main_image_url: "standin.jpg"
-  #   index_image_url: "portfolio_index.png"
-  #   timeframe: Making my Portfolio
-  #   external: false
   -
-    name: Coming soon
+    name: MakerSquare Projects
+    subtitle:
+      My first Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+    slug: makersquare
+    type: Project One
+    main_image_url: "standin.jpg"
+    index_image_url: "mks_project.png"
+    timeframe: MakerSquare Projects
+    external: false
+  -
+    name: Personal Projects
+    subtitle:
+      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+    slug: code
+    type: Project Three
+    main_image_url: "standin.jpg"
+    index_image_url: "portfolio_index.png"
+    timeframe: Personal Projects
+    external: false
+  -
+    name: Resources
+    subtitle:
+      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+    slug: resources
+    type: Project Three
+    main_image_url: "standin.jpg"
+    index_image_url: "resources.png"
+    timeframe: Resources
+    external: false
+  -
+    name: Interviewing
+    subtitle:
+      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+    slug: tech-interviews
+    type: Project Three
+    main_image_url: "interviewing.png"
+    index_image_url: "Interviewing.png"
+    timeframe: Interviewing
+    external: false
+  -
+    name: Mentorship
+    subtitle:
+      My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+    slug: mentorship
+    type: Project Three
+    main_image_url: "standin.jpg"
+    index_image_url: "mentorship.png"
+    timeframe: Mentorship
+    external: false
+  -
+    name: Coming Soon
     subtitle:
       My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
     slug: coming-soon
@@ -39,46 +79,6 @@ projects:
     index_image_url: "coming_soon.jpg"
     timeframe: Coming soon!
     external: false
-  # -
-  #   name: Rails API Analytics tool with D3.js
-  #   subtitle:
-  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-  #   slug: project-five
-  #   type: Project Three
-  #   main_image_url: "standin.jpg"
-  #   index_image_url: "standin.jpg"
-  #   timeframe: Rails API Analytics tool with D3.js
-  #   external: false
-  # # -
-  #   name: Social Bookmarking Tool
-  #   subtitle:
-  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-  #   slug: project-five
-  #   type: Project Three
-  #   main_image_url: "standin.jpg"
-  #   index_image_url: "standin.jpg"
-  #   timeframe: Social Bookmarking Tool
-  #   external: false
-  # -
-  #   name: Personal Wiki
-  #   subtitle:
-  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-  #   slug: project-five
-  #   type: Project Three
-  #   main_image_url: "standin.jpg"
-  #   index_image_url: "standin.jpg"
-  #   timeframe: Personal Wiki Generator
-  #   external: false
-  # -
-  #   name: Algorithms and Data Structures repo
-  #   subtitle:
-  #     My third Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-  #   slug: project-five
-  #   type: Project Three
-  #   main_image_url: "standin.jpg"
-  #   index_image_url: "standin.jpg"
-  #   timeframe: Puzzles Collection
-  #   external: false
   # -
   #   name: Flashcard Tool
   #   subtitle:
