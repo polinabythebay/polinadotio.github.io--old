@@ -56,7 +56,7 @@ projects:
     slug: tech-interviews
     type: Project Three
     main_image_url: "interviewing.png"
-    index_image_url: "Interviewing.png"
+    index_image_url: "interviewing.png"
     timeframe: Interviewing
     external: false
   -
