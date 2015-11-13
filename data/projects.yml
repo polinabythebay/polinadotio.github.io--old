@@ -46,7 +46,7 @@ projects:
     slug: resources
     type: Project Three
     main_image_url: "standin.jpg"
-    index_image_url: "resources.png"
+    index_image_url: "resources_cat.png"
     timeframe: Resources
     external: false
   -
