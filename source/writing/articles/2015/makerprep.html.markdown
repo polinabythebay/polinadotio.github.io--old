@@ -10,7 +10,7 @@ Prior to taking the course, I had been working at my first job out of college at
 
 Coming from a technical background, I was looking to find other individuals with similar learning goals to myself. This lead me to attending Javascript study groups at MakerSquare, and enrolling in their part time onsite course.
 
-### Course overview
+#### Course overview
 
 The course is taught and curated by a MakerSquare fellow, which is a student who recently completed MakerSquare's 3 month program.
 
@@ -19,7 +19,7 @@ The course is taught and curated by a MakerSquare fellow, which is a student who
 - Duration: 4 weeks, 5 days/week, 6:30-9:30pm each day (~60 hours total)
 - Cost: $900
 
-### What the course covers
+#### What the course covers
 
 - HTML, CSS, Markdown, Forms, Bootstrap
 - DOM, Javascript runtime, JSON
@@ -37,11 +37,11 @@ The third most valuable thing I got out of MakerPrep was the confidence that I n
 
 A fourth valuable aspect of the course is if you're interested in attending MakerSquare, the course is taught by someone who went through the program and is a great source of knowledge for what the program covered and their experience.
 
-### What the course does not cover
+#### What the course does not cover
 
 Makerprep does not cover everything you need to know to pass an interview at MakerSquare. I'll cover prepping for the MakerSquare interview in a separate post, but I wanted to point this out here. I think the course does a great job of teaching you web and JavaScript fundamentals that will help you succeed at MakerSquare, but you will need to do additional studying to master topics covered in the interview.
 
-### Alternatives to MakerPrep
+#### Alternatives to MakerPrep
 
 One important thing to know prior to taking MakerPrep is that MakerSquare is a Hack Reactor Core program member, as is Telegraph Academy in Oakland, CA. Telegraph Academy offers a prep course to the exact same material taught at MakerSquare and Hack Reactor. All three software accelerators have their own implementations of the prep course, but at the end of the day they're trying to achieve the same result. I would recommend checking out the alternatives to see if it would be a better fit for you logistically, culturally, or geographically.
 
