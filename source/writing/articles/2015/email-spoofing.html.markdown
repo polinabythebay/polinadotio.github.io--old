@@ -20,40 +20,15 @@ In order to send SMTP commands to a mail server you need to know the host name o
 
 SSH into my linux account:
  
-<pre><code> 
-$ ssh -Y psoshnin@cs.wellesley.edu
-psoshnin@cs.wellesley.edu's password:
-[psoshnin@tempest~] 
-</pre></code>
+<script src="https://gist.github.com/polinadotio/2eeb5ddf1bd29755f25f.js"></script>
 
 Query DNS for the mail servers that deliver mail to wellesley.edu:
 
-<pre><code>
-[psoshnin@tempest~] nslookup -type=MX wellesley.edu
-Server: 149.130.10.16
-Address: 149.130.10.16#53
-wellesley.edu mail exchanger = 
-5 ALT2.ASPMX.L.GOOGLE.COM.
-wellesley.edu mail exchanger = 
-10 ASPMX2.GOOGLEMAIL.COM.
-wellesley.edu mail exchanger = 
-10 ASPMX3.GOOGLEMAIL.COM.
-wellesley.edu mail exchanger = 
-1 ASPMX.L.GOOGLE.COM.
-wellesley.edu mail exchanger = 
-5 ALT1.ASPMX.L.GOOGLE.COM.
-[psoshnin@tempest~]
-</pre></code>
+<script src="https://gist.github.com/polinadotio/61f0ac58a8feec0336e5.js"></script>
 
 From here you can see that Wellesley has 5 different mail servers through Google mail services. We need to pick one of them-- let's pick ALT2.ASPMX.L.GOOGLE.COM. We use telnet to establish the connection and use port 25 because it's a TCP connection:
 
-<pre><code>
-[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
-Trying 173.194.65.27...
-Connected to ALT2.ASPMX.L.GOOGLE.COM.
-Escape character is '^]'.
-220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
-</pre></code>
+<script src="https://gist.github.com/polinadotio/c6282f4eb5ad33adcb84.js"></script>
 
 ####Step two: Use SMTP commands to send an email
 
@@ -73,33 +48,8 @@ QUIT
 
 Note that there's a period [.] at the end. You will need that. Let's try this!
 
-<pre><code>
-[psoshnin@tempest~] telnet ALT2.ASPMX.L.GOOGLE.COM 25
-Trying 173.194.65.27...
-Connected to ALT2.ASPMX.L.GOOGLE.COM.
-Escape character is '^]'.
-220 mx.google.com ESMTP u6si42550271een.213 -gsmtp
-HELO psoshnin@wellesley.edu
-250 mx.google.com at your service
-MAIL FROM: <god@heaven.onearth>
-250 2.1.0 OK u6si4550271een.213 -gsmtp
-RCPT TO: <me@polina.io>
-250 2.1.0 OK u6si42250271een.213 -gsmtp
-DATA
-350 Go ahead u6si42550271een.213 -gsmtp
-FROM: God <god@heaven.onearth>
-TO: Earthling <why@hello.earthling>
-SUBJECT: Hello world!
-Hello world! I should visit more.
--God
-.
-250 2.0.0 OK 1392756346 u6si42550271een.213 -gsmtp
-QUIT
-221 2.0.0 closing connection u6si42550271een.213 -gsmtp
-Connection closed by foreign host.
-[psoshnin@tempest~] 
-</pre></code>
+<script src="https://gist.github.com/polinadotio/5c358ae7a543c019b447.js"></script>
 
 And there you have it. Note: you might need to check your spam folder. 
 
-<img src="/img/articles/helloworld.png" alt="" style="width: 100%;max-height: 100%">
+<img src="/img/articles/helloworld.png" alt="" style="width: 120%;max-height: 120%">

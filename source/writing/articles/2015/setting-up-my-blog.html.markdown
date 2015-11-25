@@ -11,7 +11,7 @@ This was originally going to be a few notes on how to set up a Middleman blog, b
 - Octopress [blog](https://github.com/polinadotio/psoshnin.github.io--v3)
 - Homemade [static blog generator](https://github.com/polinadotio/static-blog-generator) written in Flask
 
-With the exception of the single page D3.js visualization, all are static sites and all are hosted using [Github pages](https://pages.github.com/).
+All are static sites and all are hosted using [Github pages](https://pages.github.com/).
 
 #### What is a static site?
 
@@ -25,14 +25,14 @@ The second is that Github allows you to host a static site for free using Github
 
 The simplest thing you can do is create an `index.html` file in a Github repo and title the repo `github-username.github.io`. When you go to that link you'll see your html file.
 
-The next thing you can do is try out a static site generator. They can make the deploy process nicer for you and add special features that makes blogging easier. Here are a few popular static site generators:
+The next thing you can do is try out a static site generator. They can make the deployment process nicer for you and add special features that make blogging easier. Here are a few popular static site generators:
 
 - [Jekyll](http://jekyllrb.com/), generator written in Ruby.
 - [Octopress](https://github.com/imathis/octopress), a blogging framework built on top of Jekyll.
 - [Pelican](http://blog.getpelican.com/), generator written in Python.
 - [Gitbook](https://www.gitbook.com/), a full-featured publishing platform.
 
-A third option is to roll your own static site generator. I went this route after playing around with both Jekyll and Octopress. They both have a lot of awesome features, but I wasn't using most of them and I was getting bogged down by how much code I was sifting through that I didn't understand. So I made my own! I used [Flask](http://flask.pocoo.org/) and [Frozen-Flask](http://pythonhosted.org/Frozen-Flask/). If you're interested in learning more, check out this blog post.
+A third option is to roll your own static site generator. I went this route after playing around with both Jekyll and Octopress. They both have a lot of awesome features, but I wasn't using most of them and I was getting bogged down by how much code I was sifting through that I didn't understand. So I made my own! I used [Flask](http://flask.pocoo.org/) and [Frozen-Flask](http://pythonhosted.org/Frozen-Flask/). If you're interested in learning more, I hope to write a blog post on it in the future.
 
 #### Why Middleman?
 
