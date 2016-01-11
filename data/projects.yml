@@ -27,7 +27,7 @@ projects:
     type: Project One
     main_image_url: "standin.jpg"
     index_image_url: "mks_project.png"
-    timeframe: MakerSquare Projects
+    timeframe: MakerSquare
     external: false
   -
     name: Personal Projects
