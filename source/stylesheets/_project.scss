@@ -162,7 +162,7 @@ article {
     border-bottom: 3px solid $base-border-color;
     margin-bottom: $gt-m;
     counter-increment: section;
-    content: "User Story #" counter(section);
+    content: "";
     font-size: $f2;
   }
 }
