@@ -9,16 +9,16 @@ projects:
   #   index_image_url: "urban_dict_01.jpg"
   #   timeframe: Wellesley Urban Dictionary
   #   external: false
-  # -
-  #   name: Static Site Generator
-  #   subtitle:
-  #     My second Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
-  #   slug: project-two
-  #   type: Project Two
-  #   main_image_url: "standin.jpg"
-  #   index_image_url: "standin.jpg"
-  #   timeframe: Static Site Generator in Python
-  #   external: false
+  -
+    name: Static Site Generator
+    subtitle:
+      My second Project <a href="https://github.com/polinadotio" target="_blank">Visit it.</a>
+    slug: project-two
+    type: Project Two
+    main_image_url: "standin.jpg"
+    index_image_url: "standin.jpg"
+    timeframe: Static Site Generator in Python
+    external: false
   -
     name: MakerSquare Projects
     subtitle:
