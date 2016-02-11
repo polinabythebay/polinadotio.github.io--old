@@ -15,6 +15,9 @@ layout: "home"
     %aside.sidebar-l
       .sidebar-set
         %header
+          %h5 <a href="https://github.com/httparty/matchjs"target="_blank">Github</a> | <a href="http://matchjs.com/#/"target="_blank">URL</a>
+      .sidebar-set
+        %header
           %h5 Role
           %p Scrum Master, Developer
       .sidebar-set
@@ -24,27 +27,50 @@ layout: "home"
             %li AngularJS
             %li Node/Express
             %li RxJS
-            %li Socket.io
-            %li Twilio
-            %li Bootstrap
+            %li Firebase
             %li PostgreSQL
-            %li AWS EC2/Heroku
+            %li Heroku
+            %li Gulp
+            %li Karma + Jasmine
+            %li Protractor
+            %li Travis CI
             %li Git
-            %li Trello
       .sidebar-set
         %header
           %h5 Team
           %ul
-            %li <a href="https://www.linkedin.com/in/racheljenkins4"target="_blank">Rachel Jenkins</a>
-            %li Anthony Bibbs
-            %li Sergey Piterman
+            %li <a href="https://angel.co/rachel-jenkins"target="_blank">Rachel Jenkins</a>
+            %li <a href="https://github.com/abibbs"target="_blank">Anthony Bibbs</a>
+            %li <a href="https://angel.co/sergey-piterman"target="_blank">Sergey Piterman</a>
 
     %article.main-column.fl-w
       %h3.article-header MatchJS
-      %p.standfirst Micro mentorship platform for JS developers.
+      %p.standfirst Mentorship platform for JavaScript developers.
       .row
-        / %h4 Project Background
-        / %p
+        %p
+          <img src="/img/matchjs-connect.jpg" alt="" style="width: 100%;max-height: 100%">
+        %h4 Project Background
+        %p 
+          The world of web development is complex and can be daunting to newcomers. Additionally, not everyone has access to a formal mentoring program, or the time to participate in one on a regular basis. 
+        %p
+          MatchJS is an app designed to connect current, and aspiring software engineers seeking to improve their skills with mentors who have real-world experience and are willing to share their knowledge.
+        %h4 My role
+        %p
+          One of my chief roles was to set up the Git workflow and facilitate standups over the course of this 5 week project. Additionally, I was able to build out two of the core features: user search and messaging.
+        %h4 User Search
+        %p
+          <img src="/img/matchjs-search.jpg" alt="" style="width: 100%;max-height: 100%">
+        %p For real-time search with Angular, I leveraged the power of RxJS using an Observable based implementation. The search bar allows users to add tags from three different categories and displays results based on a combination of those categories. I first tried this in pure Angular with a Promise based approach. The problem is that I wanted the result to be the last combination queried (ex. "San Francisco" + "AngularJS") rather than the result of the longest Promise. 
+
+        %p In order to display only the latest requests to the DB, one way to get around this problem is to use RxJS. I used it by creating a source (Observable) and display the latest value using FlatMapLatest. 
+        %h4 Inbox
+        %p
+          <img src="/img/matchjs-inbox.jpg" alt="" style="width: 100%;max-height: 100%">
+        %h4 Profile
+        %p
+          <img src="/img/matchjs-profile.jpg" alt="" style="width: 100%;max-height: 100%">
+
+        / The UI for the inbox is simple, but it involved a bit of front end 
         /   Founded in 2007, Nixle connects citizens with alerts from their government agencies such as firefighters and police officers. In an effort to expand their product to broadly connect agencies, citizens, and schools altogether, the Nixle team came to <a href="http://thoughtbot.com" target="_blank">thoughtbot</a> to pursue this vision.
         / %p
         /   As the lead product designer on this project, I worked through the
