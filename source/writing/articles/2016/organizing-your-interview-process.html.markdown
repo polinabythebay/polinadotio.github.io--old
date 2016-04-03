@@ -16,6 +16,8 @@ Keep track of your interviews as they navigate through different states. I've tr
 - **Phone Screen Hiring Manager**: Professional background, trivia web/cs questions, personal projects.
 - **Phone Screen Coding**: CoderPad shared live coding or verbally explain toy problem algorithm with an engineer.
 - **Onsite**: Whiteboarding algorithms/systems design, behavioral, live coding/pairing, presenting/extending project.
+- **Offer**: Compensation, base salary, etc.
+- **Completed**: no longer in the interviewing process.
 
 Link to [Trello template](https://trello.com/b/4eJNcg7E/interviewing-trello-board): 
 
