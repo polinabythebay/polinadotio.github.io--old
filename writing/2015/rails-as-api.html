@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> ><! <![endif]-->
+<html lang='en'>
+  <!-- <![endif] -->
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>In which I decide to delegate Rails to the API layer</title>
+    <meta content='' name='description'>
+    <meta content='width=device-width' name='viewport'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="../../stylesheets/application-197a8a70.css" media="screen" rel="stylesheet" type="text/css" />
+    <script>
+      window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min-5ee64c85.js"><\/script>')
+    </script>
+    <script src='/js/plugins-d35b11c4.js'></script>
+    <script src='/js/vendor/modernizr-2.6.1.min-68fdcc99.js'></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="//use.typekit.net/vzo3kgo.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <script src='/js/article-6021ed51.js'></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>  <![endif]-->
+    <header class='header'>
+      <div class='outer-container'>
+        <p class='header-description pull-l'>
+          <a class="focus" href="/" >Polina Soshnin</a>
+          is a developer based in California.
+        </p>
+        <nav class='site-nav'>
+          <ul class='site-nav-list'>
+            <li class='site-nav-item'>
+              <a href="/projects">Projects</a>
+            </li>
+            <!-- %li.site-nav-item -->
+            <!-- = link_to "Code", "/code" -->
+            <li class='site-nav-item'>
+              <a href="/writing">Writing</a>
+            </li>
+            <li class='site-nav-item'>
+              <a href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class='container'>
+      <section class='outer-container'>
+        <section class='article-wrapper'>
+          <article class='article-item'>
+            <h2 class='article-title'>In which I decide to delegate Rails to the API layer</h2>
+            <small class='article-date'>November 27, 2015</small>
+            <div class='article-body'>
+              <p>I have been tinkering with Rails in my free time for about a year now. Rails was my first foray into web development and Flask was my second, so until now I haven&rsquo;t spent much time using Javascript. </p>
+              
+              <p>After spending a few weeks getting more familiar with the wonders of ES6, Coffeescript, Underscore, and jQuery, I recently started working with <a href="http://backbonejs.org/">Backbone.js</a> and have started implementing it in my Rails projects. It has an event system that&rsquo;s nice, and &lsquo;listeners&rsquo; that &#39;trigger&rsquo; events. Prior to Backbone I had used a sprinkling of jQuery and Ajax in my projects. Since I could inject Javascript here and there I didn&rsquo;t really understand why someone couldn&rsquo;t just use what Rails gives you (HTML views). So I started thinking about what Rails is really good at and why someone would make the decision to add Backbone to it.</p>
+              
+              <p>I think Rails is really good at creating RESTful web services. It structures its routing in terms of a set of resources accessed through uniform URIs that are defined in <code>routes.rb</code>. This is important because it makes Rails inherently <strong>stateless</strong>. If you look at a traditional Rails app, you can split it into the following:</p>
+              
+              <ul>
+              <li>stateless HTML resources for humans</li>
+              <li>stateless JSON (API) resources for machines</li>
+              </ul>
+              
+              <p>This setup has a few ramifications. The first is this means all of our HTML rendering is done server-side. That&rsquo;s okay, because it&rsquo;s how our request/response model works. However, since we are relying on the server to update the UI, it means that our interface is only as fast as our network connection. We are stuck in &ldquo;click and wait&rdquo; land.</p>
+              
+              <p>What if instead of relying on the server to update the UI, we persisted state in the DOM and re-rendered our templates client side? That would be nice, because then we could build out responsive asynchronous interfaces. Our Rails app would no longer be a simple website, it could be a rich web app with highly interactive HTML pages!</p>
+              
+              <p>But as I mentioned before, Rails is inherently stateless. How would one go about adding rich interactivity to a Rails app? Well, there are client side frameworks out there that are well suited to the task, so what you&rsquo;ll end up doing is replacing your HTML views with something like Backbone. Instead of your Rails app returning HTML views, it can now act as an API for your Backbone app and return JSON. Your Rails + Backbone app now looks like the following:</p>
+              
+              <ul>
+              <li>stateful rich client side UI provided by the Backbone layer for humans</li>
+              <li>stateless resource oriented RESTful API provided by the Rails layer for machines</li>
+              </ul>
+              
+              <p>Backbone <a href="http://backbonejs.org/#FAQ-rails">originally started</a> as a Javascript library in a Rails application, so it lends itself to pairing with Rails very nicely. It is a light framework (&lt;1000 lines of code) that allows you to structure your Javascript code in MVC fashion. It is also based on RESTful services. Whenever you create, update or destroy a Backbone model, you do so via the standard HTTP actions sent to URIs which assume a RESTful architecture (which we have!). When you do this, you are using Rails as an API.</p>
+              
+              <p>I&rsquo;m glad that I&rsquo;ve started learning more Javascript and that I&rsquo;m discovering the world of client-side applications. Instead of replacing Rails, I think adding client side frameworks to it complements nicely:</p>
+              
+              <ul>
+              <li>Rails makes an excellent CRUD RESTful API</li>
+              <li>Its asset pipeline makes it straightforward to serve up client side MVCs.</li>
+              <li>It has a good ORM, excellent libraries and a really awesome community.</li>
+              </ul>
+              
+              <p>I&rsquo;m really happy with delegating Rails to the API layer. This is also a great turning point in my web development journey&ndash; at this moment my interests of focus are learning more about functional reactive programming, building asynchronous interfaces, and learning how to design great APIs.</p>
+              
+              <h4>Further reading</h4>
+              
+              <ul>
+              <li><a href="https://gumroad.com/l/backbone-js-on-rails">Backbone on Rails book by thoughtbot</a></li>
+              <li><a href="http://blog.alexmaccaw.com/rails-is-just-and-api-and-that-s-ok">Rails is just an API and that&rsquo;s okay</a></li>
+              <li><a href="http://stackoverflow.com/questions/11918586/rails-and-backbone-working-together">Rails and Backbone working together</a></li>
+              </ul>
+            </div>
+            <div class='article-nav'></div>
+            <!-- = link_to "Back to all writing", "/writing", class: "article-nav-link button" -->
+            <!-- :plain -->
+            <!-- <div id="disqus_thread" class="article-comments button"></div> -->
+            <!-- <script type="text/javascript"> -->
+            <!-- /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ -->
+            <!-- var disqus_shortname = 'name'; // required: replace example with your forum shortname -->
+            <!-- /* * * DON'T EDIT BELOW THIS LINE * * */ -->
+            <!-- (function() { -->
+            <!-- var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; -->
+            <!-- dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; -->
+            <!-- (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); -->
+            <!-- })(); -->
+            <!-- </script> -->
+            <!-- <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
+          </article>
+        </section>
+      </section>
+    </main>
+    <!-- %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"} -->
+    <!-- :javascript -->
+    <!-- var _gaq=[['_setAccount','UA-30331708-1'],['_trackPageview']]; -->
+    <!-- (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; -->
+    <!-- g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js'; -->
+    <!-- s.parentNode.insertBefore(g,s)}(document,'script')); -->
+  </body>
+</html>
+
+<footer class='footer'>
+  <div class='outer-container'>
+    <!-- %p -->
+    <!-- Made with <i class="fa fa-heart"></i> and <a href="http://middlemanapp.com/" target="_blank">Middleman</a>. -->
+    <!-- / , <a href="http://bourbon.io" target="_blank">Bourbon</a>, and <a href="http://neat.bourbon.io" target="_blank">Neat</a>.<br> -->
+    <!-- <br> -->
+    <!-- The source code is on <a href="https://github.com/polinadotio/polinadotio.github.io" target="_blank">GitHub</a>. -->
+    <div class='col-2'>
+      <div class='column'>
+        <p>
+          <!-- Get in touch: -->
+          <!-- <u>psoshnin[at]gmail.com</u> -->
+          <!-- <i class="fa fa-code"></i> -->
+          Made with <i class="fa fa-heart"></i> and <a href="http://middlemanapp.com/" target="_blank">Middleman</a>.
+          <br>
+          <!-- Theme inspired by <a href="https://github.com/lisasy" target="_blank">@lisasy</a>. -->
+          <!-- <br> -->
+          The source code is on <a href="https://github.com/polinadotio/polinadotio.github.io" target="_blank">GitHub</a>.
+        </p>
+      </div>
+      <div class='footer-contact column'>
+        <ul class='footer-contact-list'>
+          <li class='footer-contact-item'>
+            <a href="http://github.com/polinadotio" target="_blank">
+            <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class='footer-contact-item'>
+            <a href="http://twitter.com/polinadotio" target="_blank">
+            <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class='footer-contact-item'>
+            <a href="http://www.linkedin.com/in/polinasoshnin" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <!-- %li.footer-contact-item -->
+          <!-- <a href="http://stackoverflow.com/users/2150751/907code?tab=profile" target="_blank"> -->
+          <!-- <i class="fa fa-stack-overflow"></i> -->
+          <!-- </a> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

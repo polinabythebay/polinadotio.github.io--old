@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> ><! <![endif]-->
+<html lang='en'>
+  <!-- <![endif] -->
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Creating a syllabus to learn Ruby on Rails</title>
+    <meta content='' name='description'>
+    <meta content='width=device-width' name='viewport'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="../../stylesheets/application-197a8a70.css" media="screen" rel="stylesheet" type="text/css" />
+    <script>
+      window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.0.min-5ee64c85.js"><\/script>')
+    </script>
+    <script src='/js/plugins-d35b11c4.js'></script>
+    <script src='/js/vendor/modernizr-2.6.1.min-68fdcc99.js'></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="//use.typekit.net/vzo3kgo.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <script src='/js/article-6021ed51.js'></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>  <![endif]-->
+    <header class='header'>
+      <div class='outer-container'>
+        <p class='header-description pull-l'>
+          <a class="focus" href="/" >Polina Soshnin</a>
+          is a developer based in California.
+        </p>
+        <nav class='site-nav'>
+          <ul class='site-nav-list'>
+            <li class='site-nav-item'>
+              <a href="/projects">Projects</a>
+            </li>
+            <!-- %li.site-nav-item -->
+            <!-- = link_to "Code", "/code" -->
+            <li class='site-nav-item'>
+              <a href="/writing">Writing</a>
+            </li>
+            <li class='site-nav-item'>
+              <a href="/about">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class='container'>
+      <section class='outer-container'>
+        <section class='article-wrapper'>
+          <article class='article-item'>
+            <h2 class='article-title'>Creating a syllabus to learn Ruby on Rails</h2>
+            <small class='article-date'>September  4, 2015</small>
+            <div class='article-body'>
+              <p>This is my syllabus for a self-taught course I created for myself to learn Ruby on Rails. Feel free to take inspiration from it and implement your own courses. </p>
+              
+              <p><a name="return"></a>
+              <a href="#objective">Objective</a> | <a href="#goals">Goals</a> | <a href="#overview">Overview</a> | <a href="#materials">Course Materials</a></p>
+              
+              <p><a href="#week1">Week 1</a> | <a href="#week2">Week 2</a> | <a href="#week3">Week 3</a> | <a href="#week4">Week 4</a> | <a href="#week5">Week 5</a> | <a href="#week6">Week 6</a> </p>
+              
+              <p><a href="#week7">Week 7</a> | <a href="#week8">Week 8</a> | <a href="#week9">Week 9</a> | <a href="#week10">Week 10</a> | <a href="#week11">Week 11</a> | <a href="#week12-15">Weeks 12-15</a> </p>
+              
+              <p><a href="#resources">Additional Resources</a></p>
+              
+              <p><a name="objective"></a></p>
+              
+              <h2>Objective</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <p>My goal is to gain competency and knowledge of best practices in web development by learning and implementing a web development framework. However, it can take hours, days, and weeks to become proficient in the best practices of a specific framework even for experienced developers. This is why I&rsquo;m designing an independent study where I can devote time to doing so. Why do I want to teach myself Rails specifically? A few reasons: </p>
+              
+              <ul>
+              <li>Ruby on Rails is an open-source web framework based on the Ruby programming language. </li>
+              <li>Rails is a database-agnostic MVC framework that chooses convention over configuration, which means that it&rsquo;s strongly opinionated when it comes to architectural decisions, naming conventions, paths and patterns.</li>
+              <li>Rails is a full stack web application: it includes libraries to manage frontend code, supports SASS and CoffeeScript, and does not need an external tool to manage compiling. It also includes a very opinionated workflow. </li>
+              <li>Rails’ structure makes it easy to accommodate change. Rails is particularly good at restructuring your application flow, reusing components in a simple way.</li>
+              <li>Rails can easily be extended with a wide variety of external libraries, distributed through Rubygems. 
+              It implements other best practices and methodologies in web development: TDD, REST, and DRY are among them. </li>
+              </ul>
+              
+              <p>To summarize, Rails is a powerful web development framework that lets you be more productive when working on complex projects. </p>
+              
+              <p><a name="goals"></a></p>
+              
+              <h2>Course goals</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <p>By the end of the semester, through coursework and projects I aim to have a competent knowledge of: </p>
+              
+              <ul>
+              <li><strong>Ruby</strong>, including but not limited to: Classes, methods, types, flow control, I/O, modules, Exceptions, Testing, Gems</li>
+              <li><strong>Ruby on Rails</strong>, including but not limited to: MVC model, Active Record, Action Controller, Action View, Action Pack, Testing, Routes, Filters/Callbacks, Debugging, Ajax, Action Mailer, Web Services and XML, Extending Rails, Benchmarking and performance, Deployment</li>
+              <li>Exposure to other web technologies: HTML/CSS/Javascript etc. </li>
+              <li><strong>Git</strong> and <strong>Github</strong>: Use revision control and keep all course repositories on github</li>
+              <li><strong>Heroku</strong>: understand the different Rails servers (Thin vs Unicorn) for deployment </li>
+              <li>Test-driven-development</li>
+              <li>Behavior-driven-development</li>
+              <li><strong>Product Planning</strong>: user stories, use cases, wireframes, and mockups</li>
+              <li>Exposure to web <strong>APIs</strong>: Twitter, Gmail, Google Maps, MailChimp, Stripe, etc. </li>
+              <li>Take steps towards learning the ropes of becoming a successful developer in the modern open source driven Rails Community.</li>
+              </ul>
+              
+              <p><a name="overview"></a></p>
+              
+              <h2>Course overview</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <p><strong>Weeks 1-8</strong>: Fundamentals of Ruby and Ruby on Rails</p>
+              
+              <p><strong>Weeks 9-11</strong>: Build a payments site using Stripe</p>
+              
+              <p><strong>Weeks 12-15</strong>: Extend site and/or work on a project of choice implementing gems of choice </p>
+              
+              <p><a name="materials"></a></p>
+              
+              <h2>Main Course materials</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <p><a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book"><em>Learn Web Development with Rails</em></a> by Michael Hartl</p>
+              
+              <p><a href="http://learn-rails.com/learn-ruby-on-rails.html"><em>Learn Ruby on Rails</em></a> by Daniel Kehoe</p>
+              
+              <p><a href="https://www.petekeen.net/mastering-modern-payments"><em>Mastering Modern Payments: Using Stripe with Rails</em></a> by Pete Keen</p>
+              
+              <p><a href="https://www.ruby-toolbox.com/">The Ruby Toolbox</a></p>
+              
+              <p><a href="http://www.codequizzes.com/">CodeQuizzes</a></p>
+              
+              <p><a name="week1"></a></p>
+              
+              <h2>Week One</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <p>Setup blog and course</p>
+              
+              <p>Set up blog using Octopress that is made with Jekyll, a static site generator made with Rails (so I can use Rails to blog about Rails!)</p>
+              
+              <p>Host blog on github, track blogs and changes on github</p>
+              
+              <p>Name of blog: http://polina.io/</p>
+              
+              <p>Blog via <a href="http://octopress.org/docs/blogging/">Octopress</a></p>
+              
+              <p><a name="week2"></a></p>
+              
+              <h2>Week Two</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Work through <a href="http://tryruby.org/levels/1/challenges/0">Try Ruby Exercises</a></p>
+              
+              <p><a href="http://ruby.learncodethehardway.org/book/">Learn Ruby the Hard Way</a></p>
+              
+              <p><a href="https://rubymonk.com/">Rubymonk</a>: metaprogramming and common ruby methods</p>
+              
+              <p><a href="http://www.codecademy.com/tracks/ruby">Code Academy</a></p>
+              
+              <p><a href="http://rubykoans.com/">Ruby Koans</a></p>
+              
+              <h4>Quizzes</h4>
+              
+              <ul>
+              <li><a href="http://www.codequizzes.com/topics/28/quizzes/92">Ruby Array Quiz</a></li>
+              <li><a href="http://www.codequizzes.com/topics/28/quizzes/93">Hash quiz</a></li>
+              <li><a href="http://www.codequizzes.com/topics/28/quizzes/94">Object Oriented Programming</a></li>
+              <li><a href="http://www.codequizzes.com/topics/28/quizzes/95">More OOP</a> </li>
+              <li><a href="http://www.codequizzes.com/topics/28/quizzes/96">Inheritance</a></li>
+              <li><a href="http://www.codequizzes.com/topics/28/quizzes/97">Object Oriented Design</a></li>
+              <li><a href="http://www.codequizzes.com/topics/28/quizzes/98">Code Blocks</a></li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>RESTful micro framework in Ruby </li>
+              <li>Write Blog Post</li>
+              <li>Update Github</li>
+              </ul>
+              
+              <p><a name="week3"></a></p>
+              
+              <h2>Week three</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h5>Exercises</h5>
+              
+              <p>Chapters 1-2 <em>Learn Web Development with Rails</em></p>
+              
+              <ul>
+              <li>From zero to deploy: Version Control with GIT, deploying with Heroku</li>
+              <li>A demo app: planning the application, the Users resource, the Microposts resource</li>
+              </ul>
+              
+              <p>Chapters 1-8 <em>Learn Rails</em></p>
+              
+              <p>Jeffrey&rsquo;s <a href="http://net.tutsplus.com/tutorials/ruby/the-best-way-to-learn-ruby-on-rails/">introduction</a> to Rails </p>
+              
+              <p><a href="https://www.codeschool.com/courses/rails-for-zombies-redux">Rails for Zombies</a></p>
+              
+              <p>Rails intro <a href="http://net.tutsplus.com/tutorials/ruby/the-intro-to-rails-screencast-i-wish-i-had/">screencast</a></p>
+              
+              <p>Git <a href="http://gitimmersion.com/">Immersion</a></p>
+              
+              <h5>Quizzes</h5>
+              
+              <ul>
+              <li>Learning Unix for OS X</li>
+              <li>Basic Git Commands </li>
+              <li>Basic Git </li>
+              <li>Git Rebasing </li>
+              <li>Git branch off a branch </li>
+              <li>Git interactive rebasing </li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Implement Git in Ruby</li>
+              <li>App from <em>Learn Rails</em>: Contact form, save to Google Drive</li>
+              <li>Update Github</li>
+              <li>Write Blog Post</li>
+              </ul>
+              
+              <p>For fun: Basic <a href="http://www.dontfeartheinternet.com/">HTML and CSS</a></p>
+              
+              <p><a name="week4"></a></p>
+              
+              <h2>Week Four</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Chapters 3-4 <em>Learn Web Development with Rails</em></p>
+              
+              <ul>
+              <li>Static Pages</li>
+              <li>Rails Flavored Ruby</li>
+              </ul>
+              
+              <p>Chapters 9-28 <em>Learn Rails</em></p>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Devise for authentication with ActiveRecord and SQLite for a database</li>
+              <li>Devise for authentication with a MongoDB datastore</li>
+              <li>Update Github</li>
+              <li>Write Blog Post</li>
+              </ul>
+              
+              <p><a name="week5"></a></p>
+              
+              <h2>Week Five</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Chapters 5-6 <em>Learn Web Development with Rails</em></p>
+              
+              <ul>
+              <li>Filling the Layout</li>
+              <li>Site navigation</li>
+              <li>Bootstrap, CSS</li>
+              <li>Partials</li>
+              <li>Sass and asset pipeline</li>
+              <li>Layout links</li>
+              <li>User signup: first step</li>
+              <li>Modeling Users</li>
+              <li>User model</li>
+              <li>User validations</li>
+              <li>Adding a secure password</li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>OmniAuth for authentication with a MongoDB datastore</li>
+              <li>Base-camp style subdomains with Devise and MongoDB</li>
+              <li>Update GitHub</li>
+              <li>Write Blog Post</li>
+              </ul>
+              
+              <p>[Additional Homework]</p>
+              
+              <ul>
+              <li>Make a to-do list app with Rails</li>
+              </ul>
+              
+              <p><a name="week6"></a></p>
+              
+              <h2>Week Six</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Chapters 7-8 <em>Learn Web Development with Rails</em></p>
+              
+              <ul>
+              <li>Sign up</li>
+              <li>Showing Users</li>
+              <li>Signup form</li>
+              <li>Signup failure</li>
+              <li>Signup success</li>
+              <li>Sign in, Sign out</li>
+              <li>Sessions and sign in failure</li>
+              <li>Sign in success</li>
+              <li>Introduction to Cucumber</li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Devise for authentication and CanCan for authorization</li>
+              <li>Integrating Rails 4.0 and Twitter Bootstrap 3.0</li>
+              <li>Update GitHub</li>
+              <li>Write Blog Post</li>
+              </ul>
+              
+              <p><a name="week7"></a></p>
+              
+              <h2>Week Seven</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Chapters 9-10 <em>Learn Web Development with Rails</em></p>
+              
+              <ul>
+              <li>Updating, showing, and deleting users</li>
+              <li>Updating users</li>
+              <li>Authorization</li>
+              <li>Showing all users</li>
+              <li>Deleting users</li>
+              <li>Using Microposts</li>
+              <li>A micropost model</li>
+              <li>Showing microposts</li>
+              <li>Manipulating microposts</li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Application for a startup prelaunch signup site</li>
+              <li>Update GitHub</li>
+              <li>Write BlogPost</li>
+              </ul>
+              
+              <p><a name="week8"></a></p>
+              
+              <h2>Week Eight</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Chapter 11 <em>Learn Web Development with Rails</em></p>
+              
+              <ul>
+              <li>The Relationship model</li>
+              <li>A web interface for following users</li>
+              <li>The status feed</li>
+              <li>Conclusion</li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Site with subscription billing using Stripe</li>
+              <li>Site with subscription billing using Recurly</li>
+              <li>Update GitHub</li>
+              <li>Write Blog Post</li>
+              </ul>
+              
+              <p>[Additional Homework]</p>
+              
+              <ul>
+              <li>Create scaled down reddit clone in rails</li>
+              <li>Recreate Twitter in rails</li>
+              </ul>
+              
+              <p><a name="week9"></a></p>
+              
+              <h2>Week Nine</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Chapters 1-3 <em>Mastering Modern Payments: Using Stripe with Rails</em></p>
+              
+              <ul>
+              <li>Introduction</li>
+              <li>The Simplest Stripe Integration</li>
+              <li>Security and PCI Compliance</li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Start payments project </li>
+              <li>Blog</li>
+              <li>Update Github</li>
+              </ul>
+              
+              <p><a name="week10"></a></p>
+              
+              <h2>Week Ten</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Chapters 4-6 <em>Mastering Modern Payments: Using Stripe with Rails</em></p>
+              
+              <ul>
+              <li>Custom Payment forms</li>
+              <li>State and History</li>
+              <li>Handling Webhooks</li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Work on payments project</li>
+              <li>Blog</li>
+              <li>Update Github</li>
+              </ul>
+              
+              <p><a name="week11"></a></p>
+              
+              <h2>Week Eleven</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <h4>Exercises</h4>
+              
+              <p>Chapters 7-10 <em>Mastering Modern Payments: Using Stripe with Rails</em></p>
+              
+              <ul>
+              <li>Processing payments with Background workers</li>
+              <li>Subscriptions</li>
+              <li>Marketplaces</li>
+              <li>Additional Resources</li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Finish/continue payments project</li>
+              <li>Blog</li>
+              <li>Update Github</li>
+              </ul>
+              
+              <p><a name="week12-15"></a></p>
+              
+              <h2>Weeks 12-15</h2>
+              
+              <p>Implement popular Gems and test Rails knowledge 
+              <a href="#return">Return to top</a></p>
+              
+              <p><strong>Quizzes</strong> to test Rails knowledge</p>
+              
+              <ul>
+              <li><a href="http://www.codequizzes.com/topics/3/quizzes/10">MVC without generators</a>: Create a RESTful model, view, and controller without using any rails generators.</li>
+              <li><a href="http://www.codequizzes.com/topics/3/quizzes/11">Nested Resources</a>: Create the model, view, and controller for a nested resource.</li>
+              <li><a href="http://www.codequizzes.com/topics/3/quizzes/15">Database Queries</a>: Structure database queries to get specific information from a database efficiently.</li>
+              <li><a href="http://www.codequizzes.com/topics/3/quizzes/16">Polymorphism</a>: Make a resource that belongs_to two other resources for nested comments.</li>
+              <li><a href="http://www.codequizzes.com/topics/3/quizzes/45">Active Record</a>: Associations, delegation, callbacks, etc.</li>
+              <li><a href="http://www.codequizzes.com/topics/3/quizzes/54">Many to Many Relationships</a>: Rails practice problems on has<em>and</em>belongs<em>to</em>many and has_many :through relationships</li>
+              </ul>
+              
+              <h4>The Ruby Toolbox</h4>
+              
+              <p>Choose several of the following <a href="https://www.ruby-toolbox.com/">areas</a> and create apps with a focus on implementing popular gems in those areas:</p>
+              
+              <ul>
+              <li>Active Record Plugins</li>
+              <li>Background processing</li>
+              <li>Code Quality: code metrics</li>
+              <li>Communication</li>
+              <li>Content Management and Blogging</li>
+              <li>CSS</li>
+              <li>Data Persistence</li>
+              <li>Dev Tools</li>
+              <li>Documentation Tools</li>
+              <li>Graphics</li>
+              <li>HTML and Markups</li>
+              <li>Javascript</li>
+              <li>Maintenance and monitoring</li>
+              <li>Package and depedency management</li>
+              <li>Provision, deploy, host</li>
+              <li>Rails plugins</li>
+              <li>Security</li>
+              <li>Testing</li>
+              <li>Time and Space</li>
+              <li>Web apps, Services, and Interaction</li>
+              </ul>
+              
+              <h4>Homework</h4>
+              
+              <ul>
+              <li>Work on project(s)</li>
+              <li>Update blog</li>
+              <li>Update Github</li>
+              </ul>
+              
+              <h4>Optional Quizzes</h4>
+              
+              <ul>
+              <li><a href="http://www.codequizzes.com/topics/5/quizzes/7">Recursion</a></li>
+              <li><a href="http://www.codequizzes.com/topics/5/quizzes/99">Big O</a></li>
+              <li><a href="http://www.codequizzes.com/topics/27/quizzes/90">Selectors</a></li>
+              <li><a href="http://www.codequizzes.com/topics/27/quizzes/91">Inheritance and the cascade</a> </li>
+              <li><a href="http://www.codequizzes.com/topics/2/quizzes/3">Beginning/Intermediate jQuery</a></li>
+              </ul>
+              
+              <h4>Learn/test Javascript knowledge</h4>
+              
+              <ul>
+              <li><a href="http://www.codequizzes.com/topics/26/quizzes/84">Quiz #1</a></li>
+              <li><a href="http://www.codequizzes.com/topics/26/quizzes/85">Quiz #2</a></li>
+              <li><a href="http://www.codequizzes.com/topics/26/quizzes/87">Quiz #3</a></li>
+              <li><a href="http://www.codequizzes.com/topics/26/quizzes/88">Quiz #4</a> </li>
+              <li><a href="http://www.codequizzes.com/topics/26/quizzes/89">Quiz #5</a> </li>
+              </ul>
+              
+              <p><a name="resources"></a></p>
+              
+              <h2>Additional Resources</h2>
+              
+              <p><a href="#return">Return to top</a></p>
+              
+              <p><strong>Books</strong> (in no particular order)</p>
+              
+              <ul>
+              <li><a href="http://www.manning.com/katz/">Rails3 in Action</a></li>
+              <li><a href="http://pragprog.com/book/rails4/agile-web-development-with-rails-4">Agile Web Development in Rails</a></li>
+              <li><a href="http://www.rubyinside.com/the-rails-way-by-obie-fernandez-679.html">The Rails Way</a></li>
+              <li><a href="http://ruby-doc.com/docs/ProgrammingRuby/">Programming Ruby: The Pragmatic Programmer’s Guide</a></li>
+              <li><a href="http://shop.oreilly.com/product/9780596516178.do">The Ruby Programming Language</a></li>
+              <li><a href="http://www.poodr.com/">Practical Object-Oriented Design in Ruby</a></li>
+              <li><a href="http://guides.rubyonrails.org/getting_started.html">Rails Guides</a></li>
+              <li><a href="https://github.com/bbatsov/ruby-style-guide">Ruby Style Guide</a></li>
+              <li><a href="http://testfirst.org/learn_ruby">Test First</a></li>
+              <li><a href="http://designpatternsinruby.com/">Design Patterns in Ruby</a></li>
+              <li><a href="http://eloquentruby.com/">Eloquent Ruby</a></li>
+              <li><a href="http://www.manning.com/black2/">Well Grounded Rubyist</a></li>
+              <li><a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a></li>
+              </ul>
+              
+              <h4>Podcasts</h4>
+              
+              <ul>
+              <li><a href="http://railscasts.com/">Railscasts</a>: tutorials </li>
+              <li><a href="http://ruby5.envylabs.com/">Ruby5</a>: latest news in the Ruby Community</li>
+              <li><a href="http://thechangelog.com/">The Changelog</a>: open source news </li>
+              <li><a href="https://itunes.apple.com/us/podcast/coderpath-podcast/id214162182?mt=2">CoderPath</a>: Ruby-focused interview and discussion podcast</li>
+              <li><a href="http://www.se-radio.net/">Software Engineering Radio</a>: NPR for SWEs</li>
+              <li><a href="http://thisdeveloperslife.com/">This Developer’s Life</a>: <em>This American Life</em> for SWEs</li>
+              <li><a href="http://pragprog.com/podcasts">Pragmatic Podcasts</a>: excellent book reviews from the Pragmatic Bookshelf</li>
+              </ul>
+              
+              <h4>Meetups</h4>
+              
+              <ul>
+              <li><a href="http://railsgirls.com/">Rails Girls</a>: International community that sponsors free rails workshops for women. Based in Finland. </li>
+              <li><a href="http://www.railsbridge.org/">RailsBridge</a>: Free rails workshops for women. Based in San Francisco. </li>
+              <li><a href="http://www.meetup.com/Boston-Ruby-Women/">Boston Ruby Women</a></li>
+              <li><a href="http://www.girldevelopit.com/chapters/boston">Girl Develop It Boston</a>: Free introductory workshops for women. </li>
+              <li><a href="http://www.meetup.com/Rails-Boston/">Boston Ruby on Rails</a></li>
+              </ul>
+              
+              <h4>Conferences</h4>
+              
+              <ul>
+              <li><a href="http://www.railsconf.com/2013/talks.html">railsconf 2013 talks- Portland</a></li>
+              </ul>
+              
+              <h4>Hackathons</h4>
+              
+              <ul>
+              <li><a href="http://www.hcs.harvard.edu/~harvardwomenincs/wecode.php#">WECode</a></li>
+              <li><a href="http://2014s.pennapps.com/">PennApps</a></li>
+              </ul>
+              
+              <h4>Community</h4>
+              
+              <ul>
+              <li><a href="https://news.ycombinator.com/">Hacker News</a>: Ladies you should really follow this. It&rsquo;s like reddit with less bullshit. </li>
+              <li><a href="http://www.reddit.com/">Reddit</a>: There are good subreddits out there to discover. </li>
+              <li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+              <li><a href="http://confreaks.com/">Confreaks</a></li>
+              <li><a href="http://greenruby.org/">Green Ruby</a></li>
+              <li><a href="http://projecteuler.net/">Project Euler</a></li>
+              <li><a href="https://www.hackerrank.com/tracks">HackerRank</a></li>
+              <li><a href="http://railsbest.com/">Rails Best Practices</a></li>
+              <li><a href="http://www.readysetrails.com/">Ready Set Rails</a></li>
+              <li><a href="http://subinterest.com/rubies-in-the-rough">Rubies in the Rough</a></li>
+              <li><a href="https://github.com/generalassembly/ga-ruby-on-rails-for-devs">General Assembly: Ruby on rails for developers</a></li>
+              <li><a href="http://rubyquiz.com/">Ruby Quiz</a></li>
+              <li><a href="http://rubyrogues.com/">Ruby Rogues</a></li>
+              <li><a href="http://bitnami.com/stack/ruby">Ruby Stack</a></li>
+              <li><a href="http://www.therubygame.com/challenges/distressed-ducks/submissions">The Ruby Game</a></li>
+              </ul>
+              
+              <p>[Feel free to <i class="fa fa-code-fork"></i> this on <a href="https://github.com/polinadotio/ruby-on-rails-syllabus"><i class="fa fa-github-alt"></i></a>]</p>
+            </div>
+            <div class='article-nav'></div>
+            <!-- = link_to "Back to all writing", "/writing", class: "article-nav-link button" -->
+            <!-- :plain -->
+            <!-- <div id="disqus_thread" class="article-comments button"></div> -->
+            <!-- <script type="text/javascript"> -->
+            <!-- /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ -->
+            <!-- var disqus_shortname = 'name'; // required: replace example with your forum shortname -->
+            <!-- /* * * DON'T EDIT BELOW THIS LINE * * */ -->
+            <!-- (function() { -->
+            <!-- var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; -->
+            <!-- dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; -->
+            <!-- (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); -->
+            <!-- })(); -->
+            <!-- </script> -->
+            <!-- <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
+          </article>
+        </section>
+      </section>
+    </main>
+    <!-- %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"} -->
+    <!-- :javascript -->
+    <!-- var _gaq=[['_setAccount','UA-30331708-1'],['_trackPageview']]; -->
+    <!-- (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; -->
+    <!-- g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js'; -->
+    <!-- s.parentNode.insertBefore(g,s)}(document,'script')); -->
+  </body>
+</html>
+
+<footer class='footer'>
+  <div class='outer-container'>
+    <!-- %p -->
+    <!-- Made with <i class="fa fa-heart"></i> and <a href="http://middlemanapp.com/" target="_blank">Middleman</a>. -->
+    <!-- / , <a href="http://bourbon.io" target="_blank">Bourbon</a>, and <a href="http://neat.bourbon.io" target="_blank">Neat</a>.<br> -->
+    <!-- <br> -->
+    <!-- The source code is on <a href="https://github.com/polinadotio/polinadotio.github.io" target="_blank">GitHub</a>. -->
+    <div class='col-2'>
+      <div class='column'>
+        <p>
+          <!-- Get in touch: -->
+          <!-- <u>psoshnin[at]gmail.com</u> -->
+          <!-- <i class="fa fa-code"></i> -->
+          Made with <i class="fa fa-heart"></i> and <a href="http://middlemanapp.com/" target="_blank">Middleman</a>.
+          <br>
+          <!-- Theme inspired by <a href="https://github.com/lisasy" target="_blank">@lisasy</a>. -->
+          <!-- <br> -->
+          The source code is on <a href="https://github.com/polinadotio/polinadotio.github.io" target="_blank">GitHub</a>.
+        </p>
+      </div>
+      <div class='footer-contact column'>
+        <ul class='footer-contact-list'>
+          <li class='footer-contact-item'>
+            <a href="http://github.com/polinadotio" target="_blank">
+            <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class='footer-contact-item'>
+            <a href="http://twitter.com/polinadotio" target="_blank">
+            <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class='footer-contact-item'>
+            <a href="http://www.linkedin.com/in/polinasoshnin" target="_blank">
+            <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <!-- %li.footer-contact-item -->
+          <!-- <a href="http://stackoverflow.com/users/2150751/907code?tab=profile" target="_blank"> -->
+          <!-- <i class="fa fa-stack-overflow"></i> -->
+          <!-- </a> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
