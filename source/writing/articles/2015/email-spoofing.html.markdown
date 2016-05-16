@@ -52,4 +52,4 @@ Note that there's a period [.] at the end. You will need that. Let's try this!
 
 And there you have it. Note: you might need to check your spam folder. 
 
-<img src="/img/articles/helloworld.png" alt="" style="width: 120%;max-height: 120%">
+<img src="/img/articles/helloworld.png" alt="" style="width: 100%;max-height: 100%">

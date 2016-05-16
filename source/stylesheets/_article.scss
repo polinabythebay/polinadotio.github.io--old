@@ -1,8 +1,8 @@
 .article-directory,
 .article-wrapper {
   @include media($medium-screen) {
-    @include shift(2.5);
-    @include span-columns(7 of 12);
+    @include shift(1);
+    @include span-columns(10 of 12);
     padding-top: $gt-l;
     padding-bottom: $gt-l;
   }

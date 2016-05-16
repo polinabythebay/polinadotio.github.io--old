@@ -32,7 +32,7 @@ The only downside to this adventure with image uploaders is that I didn't find a
 
 We are going to add a profile picture to a user. Here is an overview of what we want to accomplish:
 
-<img src="/img/articles/cloudinary.jpg" alt="" style="width: 120%;max-height: 120%">
+<img src="/img/articles/cloudinary.jpg" alt="" style="width: 100%;max-height: 100%">
 
 **Step 1: Add Carrierwave and Cloudinary to your Gemfile**
 
