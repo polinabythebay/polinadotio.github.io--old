@@ -1265,6 +1265,49 @@ article.project-item {
     .footer-contact-item a:hover {
       color: #767677; }
 
+/* line 36, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+.share {
+  white-space: nowrap;
+  overflow: hidden; }
+  /* line 40, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+  .share-component {
+    display: inline-block; }
+    /* line 44, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+    .share-component:hover {
+      cursor: pointer;
+      text-decoration: none; }
+      /* line 48, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+      .share-component:hover .share-hoverLabel {
+        visibility: visible;
+        text-align: center; }
+      /* line 53, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+      .share-component:hover .share-icon {
+        background-color: #C2C3C4; }
+        /* line 55, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+        .share-component:hover .share-icon svg {
+          fill: white; }
+  /* line 62, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+  .share-icon {
+    background-color: white;
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+    border: 2px solid #C2C3C4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; }
+    /* line 73, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+    .share-icon svg {
+      fill: #C2C3C4;
+      width: 22px;
+      height: 22px; }
+  /* line 80, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_footer.scss */
+  .share-hoverLabel {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #C2C3C4;
+    visibility: hidden; }
+
 @media screen and (min-width: 40em) {
   /* line 1, /Users/polina/projects/polinadotio.github.io/source/stylesheets/_about.scss */
   .about {
