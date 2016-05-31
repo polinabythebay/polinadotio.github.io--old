@@ -83,10 +83,6 @@ GEM
       rack-livereload
     middleman-pagination (1.1.1)
       middleman-core (~> 3.2)
-    middleman-rouge (0.0.1)
-      middleman-core (>= 3.0.0)
-      redcarpet (>= 2.2.0)
-      rouge (>= 0.3.0)
     middleman-sprockets (3.3.3)
       middleman-core (>= 3.2)
       sprockets (~> 2.2)
@@ -147,10 +143,9 @@ DEPENDENCIES
   middleman-deploy (= 0.1.4)
   middleman-livereload (~> 3.1.0)
   middleman-pagination
-  middleman-rouge
-  middleman-syntax (~> 1.2.1)
+  middleman-syntax
   neat
   redcarpet
 
 BUNDLED WITH
-   1.10.6
+   1.12.3

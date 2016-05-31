@@ -3,11 +3,18 @@ layout: "home"
 ---
 
 %section.outer-container
-  .p-top-m
-    - data.projects.projects.each_with_index do |project, index|
-      %article.project-item
-        - if project.external === true
-          %h3.p-title= link_to project.name, project.url
+  %section.article-directory
+    - blog.articles.each do |article|
+      %article.article-item
+        %h2.article-title=link_to article.title, article.url
+        %p.article-date= format_date(article.date)
+
+-#%section.outer-container
+  -#.p-top-m
+    -#- data.projects.projects.each_with_index do |project, index|
+      -#%article.project-item
+        -#- if project.external === true
+          -#%h3.p-title= link_to project.name, project.url
           -# %ul.project-meta-info-list
           -#   %li.project-meta-info-item
           -#     %h6.p-timeframe= project.timeframe
@@ -16,12 +23,12 @@ layout: "home"
           -#       %h6.p-type= project.type
           -# %p.p-subtitle= project.subtitle
 
-        - else
+        -#- else
           -# %h3.p-title= link_to project.name, "/projects/#{project.slug}"
-          - if project.index_image_url?
-            .project-index-image-container
-              = link_to image_tag(project.index_image_url, class: "project-index-image"), "/projects/#{project.slug}"
-              %h6.project-index-timeframe= project.timeframe
+          -#- if project.index_image_url?
+          -#  .project-index-image-container
+          -#    = link_to image_tag(project.index_image_url, class: "project-index-image"), "/projects/#{project.slug}"
+          -#    %h6.project-index-timeframe= project.timeframe
           -# %ul.project-meta-info-list
           -#   %li.project-meta-info-item
           -#   - if project.type?

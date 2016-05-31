@@ -1,87 +1,115 @@
 ---
-title: Your Technical Interviewing Roadmap
-date: 2016-04-02
+title: Designing better Angular directives
+date: 2016-05-28
 tags:
 ---
 
-Let's go over organizing your interview process like a boss.
+There is a common pitfall when designing directives.
 
-### Part One: Organization
-
-Keep track of your interviews as they navigate through different states. I've tried using both Asana and Trello, and find Trello to work very well. Based on my experience interviewing, these are the possible states:
-
-- **Applied**: Online, Referral, or Career Fair/Hiring Network.
-- **Coding Challenge**: HackerRank timed toy problem(s), multiple choice, or take home project.
-- **Phone Screen Recruiter**: Behavioral interview.
-- **Phone Screen Hiring Manager**: Professional background, trivia web/cs questions, personal projects.
-- **Phone Screen Coding**: CoderPad shared live coding or verbally explain toy problem algorithm with an engineer.
-- **Onsite**: Whiteboarding algorithms/systems design, behavioral, live coding/pairing, presenting/extending project.
-- **Offer**: Compensation, base salary, etc.
-- **Completed**: no longer in the interviewing process.
-
-Link to [Trello template](https://trello.com/b/4eJNcg7E/interviewing-trello-board): 
-
-<img src="/img/articles/trello.jpg" alt="" style="width: 100%;max-height: 100%">
-
-####How to use:
-
-- Number your apps to keep track of how many you've done. You'll be able to see the last number in your Trello history stream.
-- Paste the job title and copy of description of job in the card to be able to reference job description later: I've found that companies will sometimes take down the job description and then 2 weeks later ask for an interview and at that point I would have forgotten what I had applied to, so document it! It also helps to have it in front of you when you're interviewing.
-- Document your entire process with a company in card comments: what went well, what didn't go well, what questions were asked, when did you last ping them, etc.
-
-####Google Drive
-
-In addition to tracking, it's incredibly important that you keep all of your application and interviewing materials organized and up to date. This is what worked for me:
-
-- Resume (PDF)
-- Resume (Original)
-- Resumes
-  - Previous Iterations
-- Cover Letters
-  - Cover Letter Template
-  - One tailored cover letter per company applied
-- Email Templates 
-  - Scheduling
-  - Rejection
-  - Thank Yous
-  - Negotiation
-- Behavioral Phone Screen Worksheet
-- Angelist Template
-- Apps and Questionnaires (custom applications, ex. essay questions/multiple choice)
-- Company List/Notes
-- Recruiter Screen Notes
-- Personal Project Review
-- Additional Phone Screen Notes to help you feel prepared
-
-####Github
-
-- Algorithms and toy problem repo
-
-I found that redoing toy problems and seeing my progression through them/doing them in different ways was very helpful. Documenting my toy problem process on Github was also satisfying and kept me motivated to do it at least once a day.
-
-### Part Two: Execution
-
-**Applications**:
-
-- Initially apply to up to 5 a day. Start at 5 or more a day in the first couple weeks.
-- When you have just about as many companies as you feel comfortable interviewing with at a given time, stop sending applications or keep it to 1-2 a day. This will depend on the individual, but I wouldn't ramp up applying again until you have less active interviews in your funnel than you'd like.
-
-**Phone Screens**:
-
-- One hour warmup (Interviewing is a performance. Figure out what works for you).
-- I schedule phone interviews in the mornings (9am-12pm). Figure out if there's a good time of day for you.
-- I have a sheet of paper with me with the name of the interviewer(s) written on it, the name of the company, a reference of the job description handy, a reference of my notes pertaining to the kind of interview, and a list of questions specific to the company. 
-- Make sure you have a glass of water.
-- I put my phone on speakerphone, which works pretty well for me and lets me take notes. Some people prefer nice headphones.
-- I also have my computer handy and a copy of my resume. Sometimes a recruiter/hiring manager will want you to take a look at something online in the middle of the interview.
-
-**Onsite**
-
-- Bring a folder with you to the onsite and your computer/power cord.
-- Bring extra copies of your resume.
-- Bring a water bottle.
+Consider the following directive definition:
 
 
+```javascript
 
+/* @ngInject */
+
+function profileInfo($http) {
+  return {
+    scope: {
+      profileId: "="
+    },
+    template: require('./profile-info.html'),
+    link: function(scope, element) {
+    
+      $http.get("/api/profiles/" + scope.profileId)
+      .then(function(response) {
+        scope.profile = response.data.response;
+      });
+      
+    }
+  };
+}
+```
+
+and its accompanying template:
+
+```text
+
+<div class="profileInfo">
+  <profile-name title="profile.name">
+  </profile-name>
+  <profile-description description="profile.description">
+  </profile-description>
+</div>
+```
+
+There are two of problems with this approach. 
+
+### Problem #1
+
+The most obvious issue is the use of profile.title and profile.description 
+in the template. `scope.profile` is not available until the $http.get 
+request in the link function finishes. 
+The template may (and probably will) render before the request finishes, 
+which will cause .title and .description to be called on an undefined value.
+
+Note that the following solution does not work:
+
+```
+
+<div class="profileInfo">
+  <profile-title
+    ng-if=”profile”
+    title="profile.title">
+  </profile-title>
+  <profile-description
+    ng-if=”profile”
+    description="profile.description">
+  </profile-description>
+</div>
+```
+
+The reason is that the profile-title and profile-description directives 
+will still try to compile, which will try to evaluate the title and 
+description attributes so they can be passed to each directive’s scope.
+
+The solution is to place the ng-if=”profile” on a parent element:
+
+```
+
+<div ng-if=”profile” class="profileInfo">
+  <profile-title title="profile.title"></profile-title>
+  <profile-description description="profile.description">
+  </profile-description>
+</div>
+```
+
+Now, Angular will not attempt to compile the child directives until 
+scope.profile is populated when the $http.get request finishes 
+(if it finishes successfully). Using this pattern, the inner content 
+does not become visible until profile is present on the scope.
+
+### Problem #2
+
+The second issue with the directive example is much less obvious, and it has 
+to do with the following code snippet:
+
+```
+
+$http.get("/api/profiles/" + scope.profileId)
+```
+
+In the scope directive definition, profileId is passed in from a parent 
+directive in the element attributes. profileId may not be available on 
+the scope at the time the link function runs. Put another way, the link 
+function might run before angular sets up the scope. In this example, the 
+GET request might end up looking like `/api/profiles/undefined`. 
+
+There are two ways around this. One is to store any data the link function
+needs on a service which gets initialized before any directives are compiled, 
+for example, in module.run. This is the recommended approach: whenever possible 
+have data be held by services instead of directives. 
+
+TODO: Talk more about the recommended approach from a technical/philosophical perspective.
 
 

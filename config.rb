@@ -14,7 +14,7 @@ activate :automatic_image_sizes
 activate :autoprefixer
 activate :directory_indexes
 activate :i18n
-activate :rouge_syntax
+activate :syntax
 
 activate :blog do |writing|
   writing.layout = "home"
